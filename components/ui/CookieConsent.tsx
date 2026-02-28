@@ -1,19 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 
 export function CookieConsent() {
-    const [show, setShow] = useState(false);
-
-    useEffect(() => {
-        const consent = localStorage.getItem("oando-cookie-consent");
-        if (!consent) {
-             
-            setShow(true);
-        }
-         
-    }, []);
+    const [show, setShow] = useState(() => {
+        if (typeof window === "undefined") return false;
+        return !localStorage.getItem("oando-cookie-consent");
+    });
 
     const handleAccept = () => {
         localStorage.setItem("oando-cookie-consent", "true");

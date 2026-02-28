@@ -20,7 +20,7 @@ export default function NewsPage() {
               Our news and updates section is currently in development.
             </p>
             <p className="text-lg text-neutral-500">
-              Soon you'll find the latest news, product launches, company updates, 
+              Soon you&apos;ll find the latest news, product launches, company updates, 
               and industry insights from One and Only Furniture.
             </p>
           </div>

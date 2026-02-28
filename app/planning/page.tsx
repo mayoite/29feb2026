@@ -20,7 +20,7 @@ export default function PlanningPage() {
               Our professional planning service section is currently under development.
             </p>
             <p className="text-lg text-neutral-500">
-              We're creating comprehensive tools and services to help you plan 
+              We&apos;re creating comprehensive tools and services to help you plan 
               and design your perfect office space with our expert consultants.
             </p>
           </div>

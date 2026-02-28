@@ -15,9 +15,11 @@ import {
   ChevronDown,
   ChevronUp,
   Filter,
+  ShoppingCart,
 } from "lucide-react";
 import { useState, useMemo, useCallback, Suspense } from "react";
 import clsx from "clsx";
+import { useQuoteCart } from "@/lib/store/quoteCart";
 
 // â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
@@ -246,6 +248,7 @@ function ProductCard({
   product: FlatProduct;
   categoryId: string;
 }) {
+  const addItem = useQuoteCart((state) => state.addItem);
   const firstImage =
     product.images && product.images.length > 0
       ? product.images[0]
@@ -256,70 +259,86 @@ function ProductCard({
   );
   const displayName = product.name;
   const ecoScore = product.metadata?.sustainabilityScore || 0;
+  const productHref = `/products/${categoryId}/${product.slug || product.id}`;
 
   return (
-    <Link
-      href={`/products/${categoryId}/${product.slug || product.id}`}
-      className="group block bg-white border border-neutral-100 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-    >
-      {/* Image */}
-      <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
-        <Image
-          src={imgSrc}
-          alt={displayName}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain p-4 transition-transform duration-500 group-hover:scale-103"
-          onError={() => setImgSrc("/images/fallback/category.webp")}
-        />
-        {product.metadata?.bifmaCertified && (
-          <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-[10px] sm:text-xs font-bold uppercase tracking-widest text-neutral-600 px-2.5 py-1.5 rounded-sm shadow-sm">
-            BIFMA
-          </div>
-        )}
-        {product.metadata?.priceRange && (
-          <div className="absolute top-2 right-2 bg-neutral-900/75 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2.5 py-1.5 rounded-sm shadow-sm">
-            {product.metadata.priceRange}
-          </div>
-        )}
-        {ecoScore > 0 && (
-          <div
-            className={clsx(
-              "absolute bottom-2 left-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-sm shadow-sm",
-              ecoScore > 7
-                ? "bg-green-100/90 text-green-800"
-                : "bg-white/90 text-neutral-600",
-            )}
-          >
-            Eco-Score: {ecoScore}/10
-          </div>
-        )}
+    <article className="group bg-white border border-neutral-100 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+      <Link href={productHref} className="block">
+        <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
+          <Image
+            src={imgSrc}
+            alt={displayName}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-contain p-4 transition-transform duration-500 group-hover:scale-103"
+            onError={() => setImgSrc("/images/fallback/category.webp")}
+          />
+          {product.metadata?.bifmaCertified && (
+            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-[10px] sm:text-xs font-bold uppercase tracking-widest text-neutral-600 px-2.5 py-1.5 rounded-sm shadow-sm">
+              BIFMA
+            </div>
+          )}
+          {product.metadata?.priceRange && (
+            <div className="absolute top-2 right-2 bg-neutral-900/75 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2.5 py-1.5 rounded-sm shadow-sm">
+              {product.metadata.priceRange}
+            </div>
+          )}
+          {ecoScore > 0 && (
+            <div
+              className={clsx(
+                "absolute bottom-2 left-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-sm shadow-sm",
+                ecoScore > 7
+                  ? "bg-green-100/90 text-green-800"
+                  : "bg-white/90 text-neutral-600",
+              )}
+            >
+              Eco-Score: {ecoScore}/10
+            </div>
+          )}
+        </div>
+        <div className="p-4">
+          <p className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium mb-1">
+            {product.seriesName}
+          </p>
+          <h3 className="text-sm font-semibold text-neutral-900 group-hover:text-neutral-700 transition-colors leading-tight">
+            {displayName}
+          </h3>
+          <p className="text-xs text-neutral-500 mt-1 line-clamp-2 leading-relaxed">
+            {product.description}
+          </p>
+          {product.metadata?.useCase && product.metadata.useCase.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-2">
+              {product.metadata.useCase.slice(0, 2).map((uc) => (
+                <span
+                  key={uc}
+                  className="text-[9px] uppercase tracking-wider font-medium text-neutral-400 bg-neutral-50 px-1.5 py-0.5 rounded-sm"
+                >
+                  {uc}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </Link>
+      <div className="px-4 pb-4">
+        <button
+          type="button"
+          onClick={() =>
+            addItem({
+              id: `quote-${product.slug || product.id}`,
+              name: displayName,
+              image: imgSrc,
+              href: productHref,
+              qty: 1,
+            })
+          }
+          className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-neutral-200 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-neutral-700 transition-colors hover:border-primary hover:text-primary"
+        >
+          <ShoppingCart className="h-4 w-4" />
+          Add To Quote
+        </button>
       </div>
-      {/* Info */}
-      <div className="p-4">
-        <p className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium mb-1">
-          {product.seriesName}
-        </p>
-        <h3 className="text-sm font-semibold text-neutral-900 group-hover:text-neutral-700 transition-colors leading-tight">
-          {displayName}
-        </h3>
-        <p className="text-xs text-neutral-500 mt-1 line-clamp-2 leading-relaxed">
-          {product.description}
-        </p>
-        {product.metadata?.useCase && product.metadata.useCase.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-            {product.metadata.useCase.slice(0, 2).map((uc) => (
-              <span
-                key={uc}
-                className="text-[9px] uppercase tracking-wider font-medium text-neutral-400 bg-neutral-50 px-1.5 py-0.5 rounded-sm"
-              >
-                {uc}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-    </Link>
+    </article>
   );
 }
 

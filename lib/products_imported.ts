@@ -1,4 +1,5 @@
 import { Sliders, Box, Info } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 export interface Product {
     id: string;
@@ -8,7 +9,7 @@ export interface Product {
     description: string;
     price: number;
     features: {
-        icon: any;
+        icon: LucideIcon;
         title: string;
         text: string;
     }[];

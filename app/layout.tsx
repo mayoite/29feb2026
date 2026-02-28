@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
+import { Navbar } from "@/components/layout/Navbar";
 import dynamic from "next/dynamic";
 import QueryProvider from "@/app/providers/QueryProvider";
 import { Analytics } from "@vercel/analytics/react";
@@ -139,7 +139,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <QueryProvider>
-          <Header />
+          <Navbar />
           <main id="main-content">{children}</main>
           <Footer />
           <AdvancedBot />

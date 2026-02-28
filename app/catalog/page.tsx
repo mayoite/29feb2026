@@ -20,7 +20,7 @@ export default function CatalogPage() {
               Our comprehensive product catalog is currently being developed.
             </p>
             <p className="text-lg text-neutral-500">
-              Soon you'll be able to browse and download our complete product catalog 
+              Soon you&apos;ll be able to browse and download our complete product catalog 
               with detailed specifications, pricing, and ordering information.
             </p>
           </div>

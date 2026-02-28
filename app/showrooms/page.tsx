@@ -20,7 +20,7 @@ export default function ShowroomsPage() {
               Our showrooms section is currently being developed.
             </p>
             <p className="text-lg text-neutral-500">
-              Soon you'll be able to explore our showroom locations, book appointments, 
+              Soon you&apos;ll be able to explore our showroom locations, book appointments, 
               and experience our furniture collections in person.
             </p>
           </div>

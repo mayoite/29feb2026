@@ -5,6 +5,8 @@
   --color-foreground: var(--foreground);
   --color-primary: #1434CB;
   --color-primary-hover: #fdbb0a;
+  --color-accent1: #fdbb0a;
+  --color-accent2: #faaa13;
 
   --font-sans: var(--font-inter), "Inter", "Helvetica Neue", sans-serif;
   --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
@@ -149,6 +151,22 @@
   }
   .typ-subtle {
     @apply text-neutral-500;
+  }
+
+  .nav-shell {
+    @apply rounded-[28px] border border-white/60 bg-white/85 shadow-[0_16px_48px_-30px_rgba(15,23,42,0.45)] backdrop-blur-xl;
+  }
+  .nav-pill {
+    @apply transition-colors duration-200;
+  }
+  .mega-card {
+    @apply transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-28px_rgba(15,23,42,0.55)];
+  }
+  .menu-chip {
+    @apply transition-colors duration-200 hover:border-primary hover:text-primary;
+  }
+  .ai-search-shell {
+    @apply border border-neutral-200/80 bg-white shadow-[0_8px_30px_-24px_rgba(15,23,42,0.45)];
   }
 
   /* Card lift micro-interaction */

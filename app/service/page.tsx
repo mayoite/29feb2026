@@ -20,7 +20,7 @@ export default function ServicePage() {
               Our comprehensive service and support section is currently under development.
             </p>
             <p className="text-lg text-neutral-500">
-              We're working hard to bring you detailed information about our installation, 
+              We&apos;re working hard to bring you detailed information about our installation, 
               maintenance, and customer support services.
             </p>
           </div>

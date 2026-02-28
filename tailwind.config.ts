@@ -27,6 +27,18 @@ const config: Config = {
     },
     extend: {
       // All brand colours defined in globals.css @theme
+      borderRadius: {
+        nav: "1.75rem",
+        mega: "1.5rem",
+        chip: "999px",
+      },
+      boxShadow: {
+        nav: "0 16px 48px -30px rgba(15, 23, 42, 0.45)",
+        mega: "0 24px 55px -30px rgba(0, 0, 0, 0.45)",
+      },
+      backdropBlur: {
+        nav: "16px",
+      },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
