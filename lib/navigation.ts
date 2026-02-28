@@ -2,6 +2,14 @@ export interface CategoryApiItem {
   id: string;
   name: string;
   count?: number;
+  subcategories?: CategorySubcategoryItem[];
+}
+
+export interface CategorySubcategoryItem {
+  id: string;
+  name: string;
+  count?: number;
+  href: string;
 }
 
 export interface GroupedCategory {
@@ -77,6 +85,7 @@ export function groupCategories(categories: CategoryApiItem[]): GroupedCategory[
       .map((item) => ({
         ...item,
         href: `/products/${item.id}`,
+        subcategories: item.subcategories || [],
       }));
 
     return {

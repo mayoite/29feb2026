@@ -96,15 +96,20 @@ export function Navbar() {
   const hideDesktopSearch = isMobileMenuOpen || pathname.startsWith("/quote-cart");
 
   useEffect(() => {
-    fetch("/api/categories")
+    fetch("/api/nav-categories")
       .then((res) => res.json())
-      .then((data: Array<{ id: string; name: string; count?: number }>) => {
-        if (!Array.isArray(data) || data.length === 0) return;
-        setGroupedCategories(groupCategories(data));
-      })
-      .catch(() => {
+      .then((payload: { groups?: GroupedCategory[]; categories?: Array<{ id: string; name: string; count?: number }> }) => {
+        if (Array.isArray(payload.groups) && payload.groups.length > 0) {
+          setGroupedCategories(payload.groups);
+          return;
+        }
+        if (Array.isArray(payload.categories) && payload.categories.length > 0) {
+          setGroupedCategories(groupCategories(payload.categories));
+          return;
+        }
         setGroupedCategories(FALLBACK_CATEGORY_GROUPS);
-      });
+      })
+      .catch(() => setGroupedCategories(FALLBACK_CATEGORY_GROUPS));
   }, []);
 
   useEffect(() => {
@@ -442,13 +447,32 @@ export function Navbar() {
                           <li key={item.id}>
                             <Link
                               href={item.href}
-                              className="flex items-center justify-between rounded-lg px-2 py-1.5 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
+                              className="flex items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-neutral-800 hover:bg-neutral-50 hover:text-neutral-900"
                             >
                               <span>{item.name}</span>
                               {typeof item.count === "number" && (
                                 <span className="text-[10px] text-neutral-400">{item.count}</span>
                               )}
                             </Link>
+                            {Array.isArray(item.subcategories) && item.subcategories.length > 0 && (
+                              <ul className="ml-2 mt-1.5 space-y-1 border-l border-neutral-100 pl-2.5">
+                                {item.subcategories.map((subcategory) => (
+                                  <li key={`${item.id}-${subcategory.id}`}>
+                                    <Link
+                                      href={subcategory.href}
+                                      className="flex items-center justify-between rounded-md px-2 py-1 text-xs text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900"
+                                    >
+                                      <span>{subcategory.name}</span>
+                                      {typeof subcategory.count === "number" && (
+                                        <span className="text-[10px] text-neutral-400">
+                                          {subcategory.count}
+                                        </span>
+                                      )}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -595,7 +619,7 @@ export function Navbar() {
                             <li key={item.id}>
                               <Link
                                 href={item.href}
-                                className="flex min-h-11 items-center justify-between rounded-lg px-2 py-1.5 text-sm text-neutral-700 hover:bg-neutral-50"
+                                className="flex min-h-11 items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-neutral-800 hover:bg-neutral-50"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 <span>{item.name}</span>
@@ -603,6 +627,26 @@ export function Navbar() {
                                   <span className="text-[10px] text-neutral-400">{item.count}</span>
                                 )}
                               </Link>
+                              {Array.isArray(item.subcategories) && item.subcategories.length > 0 && (
+                                <ul className="ml-2 space-y-1 border-l border-neutral-100 pl-2.5 pb-1">
+                                  {item.subcategories.map((subcategory) => (
+                                    <li key={`${item.id}-${subcategory.id}`}>
+                                      <Link
+                                        href={subcategory.href}
+                                        className="flex min-h-10 items-center justify-between rounded-md px-2 py-1 text-xs text-neutral-600 hover:bg-neutral-50"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                      >
+                                        <span>{subcategory.name}</span>
+                                        {typeof subcategory.count === "number" && (
+                                          <span className="text-[10px] text-neutral-400">
+                                            {subcategory.count}
+                                          </span>
+                                        )}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
                             </li>
                           ))}
                         </ul>
