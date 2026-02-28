@@ -2,5 +2,6 @@
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "git.ignoreLimitWarning": true,
-  "markdown.validate.enabled": true
+  "markdown.validate.enabled": true,
+  "chatgpt.openOnStartup": true
 }

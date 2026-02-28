@@ -49,3 +49,5 @@ next-env.d.ts
 lib/backup/
 reports/
 backup/
+
+.vercel
