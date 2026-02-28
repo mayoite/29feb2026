@@ -190,14 +190,15 @@ function classifySubcategory(
     if (hasToken(text, "meeting") || hasToken(text, "conference")) {
       return { label: "Meeting Tables", slug: "meeting-tables" };
     }
+    if (hasToken(text, "cafe")) return { label: "Cafe Tables", slug: "cafe-tables" };
     if (hasToken(text, "training")) {
       return { label: "Training Tables", slug: "training-tables" };
     }
-    if (hasToken(text, "cafe")) return { label: "Cafe Tables", slug: "cafe-tables" };
     return { label: "Cabin Tables", slug: "cabin-tables" };
   }
 
   if (category === "storages") {
+    if (hasToken(text, "locker")) return { label: "Locker", slug: "locker" };
     if (hasToken(text, "compactor")) {
       return { label: "Compactor Storage", slug: "compactor-storage" };
     }
@@ -210,15 +211,22 @@ function classifySubcategory(
     if (hasToken(text, "collaborative") || hasToken(text, "pod")) {
       return { label: "Collaborative", slug: "collaborative" };
     }
+    if (
+      hasToken(text, "occasional table") ||
+      hasToken(text, "coffee table") ||
+      hasToken(text, "side table")
+    ) {
+      return { label: "Occasional Tables", slug: "occasional-tables" };
+    }
     if (hasToken(text, "pouffee") || hasToken(text, "pouf") || hasToken(text, "ottoman")) {
       return { label: "Pouffee", slug: "pouffee" };
     }
     return { label: "Lounge", slug: "lounge" };
   }
 
-  if (hasToken(text, "auditorium")) return { label: "Auditorium", slug: "auditorium" };
-  if (hasToken(text, "hostel")) return { label: "Hostel", slug: "hostel" };
   if (hasToken(text, "library")) return { label: "Library", slug: "library" };
+  if (hasToken(text, "hostel")) return { label: "Hostel", slug: "hostel" };
+  if (hasToken(text, "auditorium")) return { label: "Auditorium", slug: "auditorium" };
   return { label: "Classroom", slug: "classroom" };
 }
 

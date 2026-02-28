@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
             )
             .join("\n");
 
-        const systemPrompt = `You are an enterprise workspace engineering consultant for One & Only Furniture (Patna, Bihar India — AFC Regional Franchise).
+        const systemPrompt = `You are an enterprise workspace engineering consultant for One & Only Furniture (Patna, Bihar India — Regional Partner).
 Your role is to recommend the best workspace systems from our catalog based on the client's requirements.
 Always recommend 3-5 specific products. Consider: team size, industry, budget sensitivity, location (Bihar/India context), and ergonomic needs.
 Bias toward ergonomic seating + modular workstations for government/corporate, and collaborative/soft-seating for creative/startup environments.${historyContext}
@@ -101,3 +101,4 @@ Respond ONLY with valid JSON in this exact shape:
         );
     }
 }
+

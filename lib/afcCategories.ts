@@ -30,12 +30,12 @@ export const AFC_CATEGORY_DESCRIPTIONS: Record<RequestedCategoryId, string> = {
 };
 
 export const AFC_SUBCATEGORY_LABELS: Record<RequestedCategoryId, readonly string[]> = {
-  seating: ["Leather Chair", "Mesh Chair", "Training Chair", "Cafe Chair"],
-  workstations: ["Height Adjustable Series", "Panel Series", "Desking Series"],
-  tables: ["Cabin Tables", "Meeting Tables", "Training Tables", "Cafe Tables"],
-  storages: ["Compactor Storage", "Metal Storage", "Prelam Storage"],
-  "soft-seating": ["Lounge", "Sofa", "Collaborative", "Pouffee"],
-  education: ["Classroom", "Auditorium", "Hostel", "Library"],
+  seating: ["Mesh Chair", "Leather Chair", "Training Chair", "Cafe Chair"],
+  workstations: ["Height Adjustable Series", "Desking Series", "Panel Series"],
+  tables: ["Cabin Tables", "Meeting Tables", "Cafe Tables", "Training Tables"],
+  storages: ["Prelam Storage", "Metal Storage", "Compactor Storage", "Locker"],
+  "soft-seating": ["Lounge", "Sofa", "Collaborative", "Pouffee", "Occasional Tables"],
+  education: ["Classroom", "Library", "Hostel", "Auditorium"],
 };
 
 type ProductWithContext = {
@@ -181,12 +181,13 @@ function classifyToRequestedSubcategory(
 
   if (categoryId === "tables") {
     if (hasToken(text, "meeting") || hasToken(text, "conference")) return "Meeting Tables";
-    if (hasToken(text, "training")) return "Training Tables";
     if (hasToken(text, "cafe")) return "Cafe Tables";
+    if (hasToken(text, "training")) return "Training Tables";
     return "Cabin Tables";
   }
 
   if (categoryId === "storages") {
+    if (hasToken(text, "locker")) return "Locker";
     if (hasToken(text, "compactor")) return "Compactor Storage";
     if (hasToken(text, "metal")) return "Metal Storage";
     return "Prelam Storage";
@@ -195,15 +196,22 @@ function classifyToRequestedSubcategory(
   if (categoryId === "soft-seating") {
     if (hasToken(text, "sofa")) return "Sofa";
     if (hasToken(text, "collaborative") || hasToken(text, "pod")) return "Collaborative";
+    if (
+      hasToken(text, "occasional table") ||
+      hasToken(text, "coffee table") ||
+      hasToken(text, "side table")
+    ) {
+      return "Occasional Tables";
+    }
     if (hasToken(text, "pouffee") || hasToken(text, "pouf") || hasToken(text, "ottoman")) {
       return "Pouffee";
     }
     return "Lounge";
   }
 
-  if (hasToken(text, "auditorium")) return "Auditorium";
-  if (hasToken(text, "hostel")) return "Hostel";
   if (hasToken(text, "library")) return "Library";
+  if (hasToken(text, "hostel")) return "Hostel";
+  if (hasToken(text, "auditorium")) return "Auditorium";
   return "Classroom";
 }
 

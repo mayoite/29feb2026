@@ -3,10 +3,13 @@ import type { CompatProduct } from "@/lib/getProducts";
 import { getCatalog } from "@/lib/getProducts";
 import {
   AFC_CATEGORY_ORDER,
+  AFC_SUBCATEGORY_LABELS,
   classifyToRequestedCategory,
   getAfcCategoryLabel,
 } from "@/lib/afcCategories";
 import { groupCategories, type CategoryApiItem } from "@/lib/navigation";
+
+export const dynamic = "force-dynamic";
 
 type FlattenedProduct = {
   product: CompatProduct;
@@ -17,6 +20,58 @@ type FlattenedProduct = {
 function normalizeSubcategory(value: unknown): string {
   const text = String(value || "").trim();
   return text.length > 0 ? text : "General";
+}
+
+function canonicalizeSubcategory(categoryId: string, rawValue: unknown): string {
+  const value = normalizeSubcategory(rawValue).toLowerCase();
+
+  if (categoryId === "seating") {
+    if (value.includes("mesh")) return "Mesh Chair";
+    if (value.includes("training")) return "Training Chair";
+    if (value.includes("cafe") || value.includes("stool")) return "Cafe Chair";
+    return "Leather Chair";
+  }
+
+  if (categoryId === "workstations") {
+    if (value.includes("height")) return "Height Adjustable Series";
+    if (value.includes("panel")) return "Panel Series";
+    return "Desking Series";
+  }
+
+  if (categoryId === "tables") {
+    if (value.includes("meeting") || value.includes("conference")) return "Meeting Tables";
+    if (value.includes("cafe")) return "Cafe Tables";
+    if (value.includes("training")) return "Training Tables";
+    return "Cabin Tables";
+  }
+
+  if (categoryId === "storages") {
+    if (value.includes("locker")) return "Locker";
+    if (value.includes("compactor")) return "Compactor Storage";
+    if (value.includes("metal")) return "Metal Storage";
+    return "Prelam Storage";
+  }
+
+  if (categoryId === "soft-seating") {
+    if (value.includes("sofa")) return "Sofa";
+    if (value.includes("collaborative") || value.includes("pod")) return "Collaborative";
+    if (value.includes("pouf") || value.includes("pouffee") || value.includes("ottoman")) {
+      return "Pouffee";
+    }
+    if (
+      value.includes("occasional table") ||
+      value.includes("coffee table") ||
+      value.includes("side table")
+    ) {
+      return "Occasional Tables";
+    }
+    return "Lounge";
+  }
+
+  if (value.includes("library")) return "Library";
+  if (value.includes("hostel")) return "Hostel";
+  if (value.includes("auditorium")) return "Auditorium";
+  return "Classroom";
 }
 
 function subcategoryId(value: string): string {
@@ -59,18 +114,27 @@ export async function GET() {
       });
       countMap.set(mappedCategory, (countMap.get(mappedCategory) || 0) + 1);
 
-      const subcategory = normalizeSubcategory(item.product.metadata?.subcategory);
+      const subcategory = canonicalizeSubcategory(
+        mappedCategory,
+        item.product.metadata?.subcategory,
+      );
       const bucket = subMap.get(mappedCategory)!;
       bucket.set(subcategory, (bucket.get(subcategory) || 0) + 1);
     }
 
     const categories: CategoryApiItem[] = AFC_CATEGORY_ORDER.map((categoryId) => {
-      const subcategories = [...(subMap.get(categoryId)?.entries() || [])]
-        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-        .map(([name, count]) => ({
+      const counts = subMap.get(categoryId) || new Map<string, number>();
+      const canonicalOrder = AFC_SUBCATEGORY_LABELS[categoryId] || [];
+      const ordered = [...canonicalOrder];
+
+      for (const name of counts.keys()) {
+        if (!ordered.includes(name)) ordered.push(name);
+      }
+
+      const subcategories = ordered.map((name) => ({
           id: subcategoryId(name),
           name,
-          count,
+          count: counts.get(name),
           href: `/products/${categoryId}?sub=${encodeURIComponent(name)}`,
         }));
 
