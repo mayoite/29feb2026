@@ -31,8 +31,9 @@ async function run() {
 
     const sql = fs.readFileSync(sqlFile, 'utf-8');
 
-    // Regex to extract VALUES (...) from INSERT INTO products statements
-    const insertRegex = /INSERT INTO products \([^)]+\)\s+VALUES\s*\((.*?)\)(\s+ON CONFLICT)/gs;
+    // Regex to extract VALUES (...) from INSERT INTO products statements.
+    // Use [\s\S] instead of dotAll flag so this works with ES2017 targets.
+    const insertRegex = /INSERT INTO products \([^)]+\)\s+VALUES\s*\(([\s\S]*?)\)(\s+ON CONFLICT)/g;
 
     const products: any[] = [];
     let match;
