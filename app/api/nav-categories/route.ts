@@ -26,10 +26,10 @@ function canonicalizeSubcategory(categoryId: string, rawValue: unknown): string 
   const value = normalizeSubcategory(rawValue).toLowerCase();
 
   if (categoryId === "seating") {
-    if (value.includes("mesh")) return "Mesh Chair";
-    if (value.includes("training")) return "Training Chair";
-    if (value.includes("cafe") || value.includes("stool")) return "Cafe Chair";
-    return "Leather Chair";
+    if (value.includes("mesh")) return "Mesh chairs";
+    if (value.includes("training")) return "Training chairs";
+    if (value.includes("cafe") || value.includes("stool")) return "Cafe chairs";
+    return "Leather chairs";
   }
 
   if (categoryId === "workstations") {

@@ -30,7 +30,7 @@ export const AFC_CATEGORY_DESCRIPTIONS: Record<RequestedCategoryId, string> = {
 };
 
 export const AFC_SUBCATEGORY_LABELS: Record<RequestedCategoryId, readonly string[]> = {
-  seating: ["Mesh Chair", "Leather Chair", "Training Chair", "Cafe Chair"],
+  seating: ["Mesh chairs", "Leather chairs", "Training chairs", "Cafe chairs"],
   workstations: ["Height Adjustable Series", "Desking Series", "Panel Series"],
   tables: ["Cabin Tables", "Meeting Tables", "Cafe Tables", "Training Tables"],
   storages: ["Prelam Storage", "Metal Storage", "Compactor Storage", "Locker"],
@@ -165,10 +165,10 @@ function classifyToRequestedSubcategory(
   const text = productText(item);
 
   if (categoryId === "seating") {
-    if (hasToken(text, "mesh")) return "Mesh Chair";
-    if (hasToken(text, "training")) return "Training Chair";
-    if (hasToken(text, "cafe") || hasToken(text, "stool")) return "Cafe Chair";
-    return "Leather Chair";
+    if (hasToken(text, "mesh")) return "Mesh chairs";
+    if (hasToken(text, "training")) return "Training chairs";
+    if (hasToken(text, "cafe") || hasToken(text, "stool")) return "Cafe chairs";
+    return "Leather chairs";
   }
 
   if (categoryId === "workstations") {
