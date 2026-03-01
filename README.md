@@ -98,6 +98,17 @@ Category listing pages use URL-driven filters backed by `GET /api/products/filte
 
 Product cards preserve current filter context through a `from` query param so breadcrumb navigation returns users to the same filtered listing state.
 
+### Filter E2E Regression
+
+```bash
+npm run test:e2e:filters
+```
+
+This suite verifies:
+- URL filter hydration and shareability
+- sustainability filter URL updates and clear-all reset
+- listing-to-detail `from` context and breadcrumb return behavior
+
 ## Accessibility Compliance
 
 ### Automated Checks

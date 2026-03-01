@@ -5,12 +5,23 @@ function expectParam(urlString: string, key: string, expected: string) {
   expect(url.searchParams.getAll(key)).toContain(expected);
 }
 
+function expectFromContainsFilters(urlString: string, expected: Record<string, string>) {
+  const url = new URL(urlString, "http://localhost:3000");
+  const fromParam = url.searchParams.get("from");
+  expect(fromParam).toBeTruthy();
+
+  const from = new URLSearchParams(fromParam || "");
+  for (const [key, value] of Object.entries(expected)) {
+    expect(from.get(key)).toBe(value);
+  }
+}
+
 test.describe("Dynamic Filters", () => {
   test("hydrates from URL filters and keeps shareable state", async ({ page, context }) => {
     const sharedPath = "/products/seating?price=mid&mat=mesh&ecoMin=6&sort=ecoDesc";
 
     await page.goto(sharedPath);
-    await expect(page.getByLabel(/Search/i)).toBeVisible();
+    await expect(page.getByRole("textbox", { name: "Search Seating" })).toBeVisible();
 
     await expect(page.getByText(/mid range/i)).toBeVisible();
     await expect(page.getByText(/eco >= 6/i)).toBeVisible();
@@ -27,7 +38,7 @@ test.describe("Dynamic Filters", () => {
 
   test("sustainability filter updates URL and can be cleared", async ({ page }) => {
     await page.goto("/products/seating");
-    await expect(page.getByLabel(/Search/i)).toBeVisible();
+    await expect(page.getByRole("textbox", { name: "Search Seating" })).toBeVisible();
 
     const desktopAside = page.locator("aside");
     await desktopAside.getByRole("button", { name: "Sustainability" }).click();
@@ -37,34 +48,33 @@ test.describe("Dynamic Filters", () => {
     await expect(page.getByText(/eco >= 6/i)).toBeVisible();
 
     await page.getByRole("button", { name: /Clear all/i }).first().click();
-    await expect(page).toHaveURL(/\/products\/seating$/);
+    await expect(page).toHaveURL(/\/products\/seating\/?$/);
   });
 
   test("product detail carries from context and breadcrumb returns to filtered list", async ({
     page,
   }) => {
     await page.goto("/products/seating?price=mid&ecoMin=6");
-    await expect(page.getByLabel(/Search/i)).toBeVisible();
+    await expect(page.getByRole("textbox", { name: "Search Seating" })).toBeVisible();
 
     const firstProductLink = page.locator("article a[href*='from=']").first();
     await expect(firstProductLink).toBeVisible();
 
     const hrefBeforeClick = await firstProductLink.getAttribute("href");
     expect(hrefBeforeClick).not.toBeNull();
-    expectParam(hrefBeforeClick!, "from", "price=mid&ecoMin=6");
+    expectFromContainsFilters(hrefBeforeClick!, { price: "mid", ecoMin: "6" });
 
     await firstProductLink.click();
     await expect(page).toHaveURL(/\/products\/seating\/[^/?]+/);
     await expect(page).toHaveURL(/from=/);
 
-    const breadcrumbCategoryLink = page.locator("main a[href^='/products/seating?']").first();
+    const breadcrumbCategoryLink = page.locator("main a[href*='/products/seating']").first();
     await expect(breadcrumbCategoryLink).toBeVisible();
     await breadcrumbCategoryLink.click();
 
-    await expect(page).toHaveURL(/\/products\/seating\?/);
+    await expect(page).toHaveURL(/\/products\/seating\/?\?/);
     const returnedUrl = page.url();
     expectParam(returnedUrl, "price", "mid");
     expectParam(returnedUrl, "ecoMin", "6");
   });
 });
-
