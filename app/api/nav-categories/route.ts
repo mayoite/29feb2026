@@ -2,11 +2,11 @@ import { NextResponse } from "next/server";
 import type { CompatProduct } from "@/lib/getProducts";
 import { getCatalog } from "@/lib/getProducts";
 import {
-  AFC_CATEGORY_ORDER,
-  AFC_SUBCATEGORY_LABELS,
+  Catalog_CATEGORY_ORDER,
+  Catalog_SUBCATEGORY_LABELS,
   classifyToRequestedCategory,
-  getAfcCategoryLabel,
-} from "@/lib/afcCategories";
+  getCatalogCategoryLabel,
+} from "@/lib/catalogCategories";
 import { groupCategories, type CategoryApiItem } from "@/lib/navigation";
 
 export const dynamic = "force-dynamic";
@@ -131,7 +131,7 @@ export async function GET() {
     const countMap = new Map<string, number>();
     const subMap = new Map<string, Map<string, number>>();
 
-    for (const categoryId of AFC_CATEGORY_ORDER) {
+    for (const categoryId of Catalog_CATEGORY_ORDER) {
       countMap.set(categoryId, 0);
       subMap.set(categoryId, new Map<string, number>());
     }
@@ -152,9 +152,9 @@ export async function GET() {
       bucket.set(subcategory, (bucket.get(subcategory) || 0) + 1);
     }
 
-    const categories: CategoryApiItem[] = AFC_CATEGORY_ORDER.map((categoryId) => {
+    const categories: CategoryApiItem[] = Catalog_CATEGORY_ORDER.map((categoryId) => {
       const counts = subMap.get(categoryId) || new Map<string, number>();
-      const canonicalOrder = AFC_SUBCATEGORY_LABELS[categoryId] || [];
+      const canonicalOrder = Catalog_SUBCATEGORY_LABELS[categoryId] || [];
       const ordered = [...canonicalOrder];
 
       for (const name of counts.keys()) {
@@ -170,7 +170,7 @@ export async function GET() {
 
       return {
         id: categoryId,
-        name: getAfcCategoryLabel(categoryId, categoryId),
+        name: getCatalogCategoryLabel(categoryId, categoryId),
         count: countMap.get(categoryId) || 0,
         subcategories,
       };

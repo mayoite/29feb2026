@@ -569,7 +569,7 @@ function AdvancedFilterGridInner({
   const { data, isLoading, isFetching, error } = useQuery<FilterResponse>({
     queryKey: ["category-products", categoryId, apiQueryString],
     queryFn: async () => {
-      const response = await fetch(`/api/products/filter?${apiQueryString}`, {
+      const response = await fetch(`/api/products/filter/?${apiQueryString}`, {
         method: "GET",
         headers: { Accept: "application/json" },
         cache: "no-store",

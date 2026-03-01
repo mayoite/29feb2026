@@ -1,5 +1,6 @@
 import { supabase } from "./db";
 import { oandoCatalog } from "./catalog";
+import { normalizeAssetList, normalizeAssetPath } from "./assetPaths";
 
 // ── Supabase-sourced Product types ──────────────────────────────────────────
 
@@ -114,7 +115,7 @@ function toCompatProduct(p: Product): CompatProduct {
         slug: p.slug,
         name: p.name,
         description: p.description || "",
-        flagshipImage: p.flagship_image || "",
+        flagshipImage: normalizeAssetPath(p.flagship_image),
         sceneImages: [],
         variants: [],
         detailedInfo: { overview: "", features: [], dimensions: "", materials: [] },
@@ -122,9 +123,9 @@ function toCompatProduct(p: Product): CompatProduct {
             ...(p.metadata ?? {}),
             sustainabilityScore: p.specs?.sustainability_score ?? 5, // fallback if missing
         },
-        "3d_model": p["3d_model"],
-        threeDModelUrl: p["3d_model"],
-        images: p.images ?? [],
+        "3d_model": normalizeAssetPath(p["3d_model"]),
+        threeDModelUrl: normalizeAssetPath(p["3d_model"]),
+        images: normalizeAssetList(p.images),
         altText: explicitAlt.replace(/\s+/g, " ").trim().slice(0, 140),
     };
 }
@@ -144,7 +145,9 @@ export async function getProducts(): Promise<Product[]> {
     }
     return ((data ?? []) as Product[]).map(p => ({
         ...p,
-        images: p.images ?? [],
+        images: normalizeAssetList(p.images),
+        flagship_image: normalizeAssetPath(p.flagship_image),
+        "3d_model": normalizeAssetPath(p["3d_model"]),
         category_id: p.category_id,
     }));
 }
@@ -163,7 +166,9 @@ export async function getProductsByCategory(categoryId: string): Promise<Product
     }
     return ((data ?? []) as Product[]).map(p => ({
         ...p,
-        images: p.images ?? [],
+        images: normalizeAssetList(p.images),
+        flagship_image: normalizeAssetPath(p.flagship_image),
+        "3d_model": normalizeAssetPath(p["3d_model"]),
         category_id: p.category_id,
     }));
 }
@@ -180,7 +185,14 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
         console.error("[getProductBySlug] Supabase error:", error.message);
         return null;
     }
-    return data as Product;
+    if (!data) return null;
+    const row = data as Product;
+    return {
+        ...row,
+        images: normalizeAssetList(row.images),
+        flagship_image: normalizeAssetPath(row.flagship_image),
+        "3d_model": normalizeAssetPath(row["3d_model"]),
+    };
 }
 
 interface CategoryRow {

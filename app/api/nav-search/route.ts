@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import Fuse from "fuse.js";
 import { getCatalog } from "@/lib/getProducts";
-import { buildRequestedCategoryCatalog } from "@/lib/afcCategories";
+import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
 
 export const dynamic = "force-dynamic";
 

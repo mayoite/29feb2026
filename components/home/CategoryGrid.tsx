@@ -4,9 +4,9 @@ import { CategoryImage } from "@/components/home/CategoryImage";
 import { unstable_cache } from "next/cache";
 import {
   buildRequestedCategoryCatalog,
-  getAfcCategoryHref,
-  getAfcCategoryLabel,
-} from "@/lib/afcCategories";
+  getCatalogCategoryHref,
+  getCatalogCategoryLabel,
+} from "@/lib/catalogCategories";
 
 const getCachedCatalog = unstable_cache(
   async () => getCatalog(),
@@ -34,8 +34,8 @@ export async function CategoryGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-100">
           {requestedCatalog.map((category) => {
             const allProducts = category.series.flatMap((s) => s.products);
-            const categoryName = getAfcCategoryLabel(category.id, category.name);
-            const categoryHref = getAfcCategoryHref(category.id);
+            const categoryName = getCatalogCategoryLabel(category.id, category.name);
+            const categoryHref = getCatalogCategoryHref(category.id);
             const firstProductWithImage = allProducts.find(
               (p) => (p.images && p.images.length > 0) || p.flagshipImage,
             );

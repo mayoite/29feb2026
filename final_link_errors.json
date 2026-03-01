@@ -1,4 +1,4 @@
-﻿{
+{
   "links": [
     {
       "url": "http://localhost:3000/",
@@ -502,7 +502,7 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "status": 200,
       "state": "OK",
       "parent": "http://localhost:3000/",
@@ -941,14 +941,14 @@
       "url": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6899a993e44404f6f3bcc398_image%20(3).png",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
       "url": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a2e32607cc220a51bf8b9d_DESKPRO%202.jpg",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -1001,10 +1001,10 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2",
+      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -1989,7 +1989,7 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/",
+      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/",
       "status": 200,
       "state": "OK",
       "parent": "http://localhost:3000/products/oando-educational/",
@@ -2428,7 +2428,7 @@
       "url": "http://localhost:3000/images/educational/image-1.webp",
       "status": 404,
       "state": "BROKEN",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/"
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/"
     },
     {
       "url": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/69280b8ae5a83b56217012b6_BRIM%202.jpg",
@@ -2648,7 +2648,7 @@
       "url": "http://localhost:3000/images/products/imported/lab-furniture/image-1.webp",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/",
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/",
       "failureDetails": []
     },
     {
@@ -3191,10 +3191,10 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb",
+      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/",
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/",
       "failureDetails": []
     },
     {
@@ -3313,7 +3313,7 @@
       "url": "http://localhost:3000/images/educational/image-1.webp",
       "status": 404,
       "state": "BROKEN",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb"
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb"
     },
     {
       "url": "http://localhost:3000/images/collaborative/image-11.webp",

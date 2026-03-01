@@ -1,0 +1,1085 @@
+{
+  "migrationId": "catalog-subcategory-20260228192946",
+  "createdAt": "2026-02-28T19:29:46.539Z",
+  "source": "catalog-subcategory-v1",
+  "totalScanned": 145,
+  "totalChanged": 44,
+  "records": [
+    {
+      "id": "165ed7ba-5259-494e-9a1c-c5f5a95e4ed1",
+      "slug": "oando-seating--spino",
+      "name": "Spino",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Spino ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Spino ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "0ea7d021-1b86-4b90-a900-6e1ee4cd929e",
+      "slug": "oando-seating--smile",
+      "name": "Smile",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Smile ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Smile ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "da795b94-771a-459f-b0bf-2548493f5dbc",
+      "slug": "oando-seating--revoq",
+      "name": "Revoq",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Revoq ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Revoq ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "48ca6e67-43b2-40ec-b290-91aeed213643",
+      "slug": "oando-seating--flex",
+      "name": "Flex",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flex ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flex ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "9ed93dd6-ce59-4ebc-a6c2-5b81e5ca621d",
+      "slug": "oando-seating--logica",
+      "name": "Logica",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Logica ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Logica ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "7d5e7e56-3fe5-4416-bac7-1ce38ae3bbbc",
+      "slug": "oando-seating--sullion",
+      "name": "Sullion",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Sullion ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Sullion ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "6e7141e1-d856-4a94-aab7-030b46d2aaab",
+      "slug": "oando-seating--nuvic",
+      "name": "Nuvic",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Nuvic ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Nuvic ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "62936096-e3af-4ccf-bb15-c26942b271f4",
+      "slug": "oando-seating--lexus",
+      "name": "Lexus",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Lexus ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Lexus ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "df761f64-d564-4ce3-886b-d75bc5e96504",
+      "slug": "oando-seating--crox",
+      "name": "Crox",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Lounge"
+        ],
+        "category": "Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Crox ergonomic office chair",
+        "subcategory": "Cafe Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Lounge"
+        ],
+        "category": "Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Crox ergonomic office chair",
+        "subcategory": "Cafe chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-chairs"
+      }
+    },
+    {
+      "id": "21845817-fcdd-40f6-8c9d-787d1bb0fd21",
+      "slug": "oando-seating--orbit",
+      "name": "Orbit",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Orbit ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Orbit ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "900f0318-a72b-455f-a766-e5dfc584274c",
+      "slug": "oando-seating--nordic",
+      "name": "Nordic",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Nordic ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Nordic ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "3b3827c9-36b3-4021-a969-018ae1061886",
+      "slug": "oando-seating--halo",
+      "name": "Halo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Halo ergonomic office chair",
+        "subcategory": "Mesh Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "mesh-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Halo ergonomic office chair",
+        "subcategory": "Mesh chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "mesh-chairs"
+      }
+    },
+    {
+      "id": "7bf099c8-f632-4e48-b3ff-4cc906d165d0",
+      "slug": "oando-seating--toro",
+      "name": "Toro",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Toro ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Toro ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "d6a32300-b2b1-4f57-aa27-4955331c06fb",
+      "slug": "oando-seating--ember",
+      "name": "Ember",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Ember ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Ember ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "5ba6825d-a499-43c6-82e0-660858b1e515",
+      "slug": "oando-seating--fluid",
+      "name": "Fluid",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Fluid ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Fluid ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "7fc0f7a4-b3fd-4dd4-8cf9-59e3c993c84b",
+      "slug": "oando-seating--rider",
+      "name": "Rider",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rider ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rider ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "3b243285-4228-41c7-ae31-1a9f12ba3ff3",
+      "slug": "oando-seating--solace",
+      "name": "Solace",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Solace ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Solace ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "d032563f-1b5b-49dd-8ad2-eb524814f1b0",
+      "slug": "oando-seating--rio",
+      "name": "Rio",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rio ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rio ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "7a582060-a7d1-43fd-9e29-334d7e50d54d",
+      "slug": "oando-seating--dive",
+      "name": "Dive",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Dive ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Dive ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "593198de-3182-4503-bfac-2327a90f35f7",
+      "slug": "oando-seating--wing",
+      "name": "Wing",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Wing ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Wing ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "25a3e38f-7b6f-48ac-aa3a-03341fb5b544",
+      "slug": "oando-seating--casca",
+      "name": "Casca",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Casca ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Casca ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "b8ad7d2b-0f9b-4a2c-88e1-a1a2596b20e2",
+      "slug": "oando-seating--leaf",
+      "name": "Leaf",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Leaf ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Leaf ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "a3800dab-a569-4555-a806-02d704cf9141",
+      "slug": "oando-seating--flare",
+      "name": "Flare",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flare ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flare ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "246e75c0-17ea-4872-aa6b-c17c17d1e633",
+      "slug": "oando-seating--cafe-sleek",
+      "name": "Sleek Cafe",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Cafeteria",
+          "Pantry"
+        ],
+        "category": "Seating",
+        "priceRange": "budget",
+        "ai_alt_text": "Sleek Cafe ergonomic office chair",
+        "isStackable": true,
+        "subcategory": "Cafe Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Cafeteria",
+          "Pantry"
+        ],
+        "category": "Seating",
+        "priceRange": "budget",
+        "ai_alt_text": "Sleek Cafe ergonomic office chair",
+        "isStackable": true,
+        "subcategory": "Cafe chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-chairs"
+      }
+    },
+    {
+      "id": "126acd5e-a4d5-4a86-80dd-cc5e7ad56964",
+      "slug": "oando-seating--myel",
+      "name": "Myel",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Myel ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Myel ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "8d9d85a1-5c0f-4527-bb42-6df9d342bb94",
+      "slug": "oando-seating--flip",
+      "name": "Flip",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flip ergonomic office chair",
+        "subcategory": "Training Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flip ergonomic office chair",
+        "subcategory": "Training chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-chairs"
+      }
+    },
+    {
+      "id": "dd5e6254-462f-4f6c-905d-71d00c5f2ead",
+      "slug": "oando-seating--sway",
+      "name": "Sway",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Sway ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Sway ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "99678116-151d-48d6-b3af-6cbaddcf7146",
+      "slug": "oando-seating--arvo",
+      "name": "Arvo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Arvo ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Arvo ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "d5a26f6b-51f8-4dab-ac95-7eb4246b5fb5",
+      "slug": "oando-seating--pinnacle",
+      "name": "Pinnacle",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Pinnacle ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Pinnacle ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "3477ff18-b24d-4e0c-96bb-6007b243d5fa",
+      "slug": "oando-seating--phoenix",
+      "name": "Phoenix",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Phoenix ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Phoenix ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "43642a20-00cb-4349-97c4-eed6afea0b9e",
+      "slug": "oando-seating--moonlight",
+      "name": "Moonlight",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Moonlight ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Moonlight ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "ee3baa73-9653-498e-877c-e5e28c14de66",
+      "slug": "oando-seating--caneva",
+      "name": "Caneva",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Caneva ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Caneva ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "8382c701-4ecd-43fd-b38f-3c371294dbd9",
+      "slug": "oando-seating--caneva-high",
+      "name": "Caneva-High",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Caneva-High ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Caneva-High ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "7d0868fd-89e2-483e-933f-4d6159a9cf79",
+      "slug": "fluid-x",
+      "name": "Fluid X",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "category": "Seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair",
+        "sustainabilityScore": 8
+      },
+      "newMetadata": {
+        "category": "Seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs",
+        "sustainabilityScore": 8
+      }
+    },
+    {
+      "id": "fafe7efa-1c97-41cd-a1c1-25af39c2fba3",
+      "slug": "oando-seating--canaret",
+      "name": "Canaret",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Canaret ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Canaret ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "430d2912-47cf-4ff2-ba18-8ea60d9cda90",
+      "slug": "oando-seating--rock",
+      "name": "Rock",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rock ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rock ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "0e06693f-51de-466d-a1fb-eb91a8627b79",
+      "slug": "fluid-task",
+      "name": "Fluid Task",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "category": "Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Fluid Task ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair",
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "category": "Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Fluid Task ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs",
+        "sustainabilityScore": 7
+      }
+    },
+    {
+      "id": "71bf2a2b-a6de-4564-849b-6ed653b66522",
+      "slug": "classy-executive",
+      "name": "Classy Executive",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "category": "Seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Classy Executive ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 3,
+        "subcategory_slug": "leather-chair",
+        "sustainabilityScore": 6
+      },
+      "newMetadata": {
+        "category": "Seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Classy Executive ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 3,
+        "subcategory_slug": "leather-chairs",
+        "sustainabilityScore": 6
+      }
+    },
+    {
+      "id": "cc7f0ee3-38d3-40bc-ae50-4f05a5468362",
+      "slug": "oando-seating--x-mesh",
+      "name": "X Mesh",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "X Mesh ergonomic office chair",
+        "subcategory": "Mesh Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "mesh-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "X Mesh ergonomic office chair",
+        "subcategory": "Mesh chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "mesh-chairs"
+      }
+    },
+    {
+      "id": "f9dcace8-5020-406a-903a-42431013a573",
+      "slug": "oando-seating--breeze",
+      "name": "Breeze",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Breeze ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Breeze ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "20524b4b-de51-4df6-a2c1-d986a879a66d",
+      "slug": "oando-seating--lisbo",
+      "name": "Lisbo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Lisbo ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Lisbo ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "3fa7c7be-286b-4b3b-9df9-a780e1c9a4e5",
+      "slug": "oando-seating--fusion",
+      "name": "Fusion",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Fusion ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Fusion ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "542941de-0ae6-4222-ba00-f2d972eca38b",
+      "slug": "oando-seating--zilo",
+      "name": "Zilo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Zilo ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Zilo ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "leather-chairs"
+      }
+    },
+    {
+      "id": "86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
+      "slug": "oando-seating--fluid-x",
+      "name": "Fluid X",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "category": "Seating",
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      },
+      "newMetadata": {
+        "category": "Seating",
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "subcategory": "Leather chairs",
+        "subcategory_slug": "leather-chairs"
+      }
+    }
+  ]
+}

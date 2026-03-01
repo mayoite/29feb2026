@@ -102,7 +102,7 @@ const nextConfig = {
         pathname: "/storage/v1/object/public/**",
       },
       { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "afcindia.in" },
+      { protocol: "https", hostname: "catalogindia.in" },
       { protocol: "https", hostname: "static.wixstatic.com" },
       { protocol: "https", hostname: "res.cloudinary.com" },
       { protocol: "https", hostname: "cdn.prod.website-files.com" },

@@ -13,8 +13,8 @@ export function PartnershipSection() {
           <div className="shrink-0">
             <div className="relative w-80 h-32 md:w-96 md:h-48 flex items-center justify-center md:justify-start">
               <Image
-                src="/afc-logo.webp"
-                alt="AFC Furniture Solutions"
+                src="/catalog-logo.webp"
+                alt="Catalog Furniture Solutions"
                 width={480}
                 height={160}
                 sizes="(max-width: 768px) 320px, 480px"
@@ -42,12 +42,12 @@ export function PartnershipSection() {
             </p>
 
             <a
-              href="https://afcindia.in"
+              href="https://catalogindia.in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-medium text-neutral-900 hover:text-neutral-600 transition-colors border-b border-neutral-200 pb-0.5"
             >
-              Visit afcindia.in <ArrowRight className="w-3 h-3" />
+              Visit catalogindia.in <ArrowRight className="w-3 h-3" />
             </a>
           </div>
         </div>

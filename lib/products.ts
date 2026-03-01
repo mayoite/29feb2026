@@ -272,10 +272,10 @@ export const products: Product[] = [
         related: []
     },
 
-    // --- AFC India Products (Added) ---
+    // --- Catalog India Products (Added) ---
     // Workstations
     {
-        id: "afc-ws-1",
+        id: "catalog-ws-1",
         slug: "curvivo-workstation",
         name: "Curvivo",
         category: "Workstations",
@@ -287,7 +287,7 @@ export const products: Product[] = [
         related: ["deskpro-system"]
     },
     {
-        id: "afc-ws-2",
+        id: "catalog-ws-2",
         slug: "sleek-workstation",
         name: "Sleek",
         category: "Workstations",
@@ -299,7 +299,7 @@ export const products: Product[] = [
         related: ["linear-workstation"]
     },
     {
-        id: "afc-ws-3",
+        id: "catalog-ws-3",
         slug: "adaptable-system",
         name: "Adaptable",
         category: "Workstations",
@@ -313,7 +313,7 @@ export const products: Product[] = [
 
     // Chairs
     {
-        id: "afc-ch-1",
+        id: "catalog-ch-1",
         slug: "halo-chair",
         name: "Halo",
         category: "Chairs",
@@ -325,7 +325,7 @@ export const products: Product[] = [
         related: ["arvo-chair"]
     },
     {
-        id: "afc-ch-2",
+        id: "catalog-ch-2",
         slug: "arvo-chair",
         name: "Arvo",
         category: "Chairs",
@@ -337,7 +337,7 @@ export const products: Product[] = [
         related: ["snap-chair"]
     },
     {
-        id: "afc-ch-3",
+        id: "catalog-ch-3",
         slug: "myel-chair",
         name: "Myel",
         category: "Chairs",
@@ -349,7 +349,7 @@ export const products: Product[] = [
         related: ["phoenix-chair"]
     },
     {
-        id: "afc-ch-4",
+        id: "catalog-ch-4",
         slug: "phoenix-chair",
         name: "Phoenix",
         category: "Chairs",
@@ -361,7 +361,7 @@ export const products: Product[] = [
         related: ["pinnacle-chair"]
     },
     {
-        id: "afc-ch-5",
+        id: "catalog-ch-5",
         slug: "solace-chair",
         name: "Solace",
         category: "Chairs",
@@ -373,7 +373,7 @@ export const products: Product[] = [
         related: ["nordic-chair"]
     },
     {
-        id: "afc-ch-6",
+        id: "catalog-ch-6",
         slug: "nordic-chair",
         name: "Nordic",
         category: "Chairs",
@@ -385,7 +385,7 @@ export const products: Product[] = [
         related: ["ember-chair"]
     },
     {
-        id: "afc-ch-7",
+        id: "catalog-ch-7",
         slug: "sway-chair",
         name: "Sway",
         category: "Chairs",
@@ -399,7 +399,7 @@ export const products: Product[] = [
 
     // Tables
     {
-        id: "afc-tb-1",
+        id: "catalog-tb-1",
         slug: "exquisite-table",
         name: "Exquisite",
         category: "Meeting Tables",
@@ -411,7 +411,7 @@ export const products: Product[] = [
         related: ["collaborate-table"]
     },
     {
-        id: "afc-tb-2",
+        id: "catalog-tb-2",
         slug: "collaborate-table",
         name: "Collaborate",
         category: "Meeting Tables",

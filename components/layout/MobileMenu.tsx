@@ -4,7 +4,7 @@ import { X, ChevronRight, Globe, Search } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { AFC_CATEGORY_ORDER, buildAfcCategoryNav } from "@/lib/afcCategories";
+import { Catalog_CATEGORY_ORDER, buildCatalogCategoryNav } from "@/lib/catalogCategories";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -26,7 +26,7 @@ const MAIN_LINKS = [
   { label: "About", href: "/about", description: "Company information" },
 ];
 
-const DEFAULT_PRODUCT_CATEGORIES = buildAfcCategoryNav(AFC_CATEGORY_ORDER).map(
+const DEFAULT_PRODUCT_CATEGORIES = buildCatalogCategoryNav(Catalog_CATEGORY_ORDER).map(
   (item) => ({
     label: item.label,
     href: item.href,
@@ -63,7 +63,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   }, [isOpen, onClose]);
 
   useEffect(() => {
-    fetch("/api/categories")
+    fetch("/api/categories/")
       .then((r) => r.json())
       .then((cats: { id: string; name: string }[]) => {
         if (!Array.isArray(cats) || cats.length === 0) return;

@@ -59,16 +59,20 @@ function FounderCard({ name, bio, image }: Founder) {
 
 export default async function CompanyPage() {
   let founders = HARDCODED_FOUNDERS;
-  try {
-    const { data, error } = await supabase.from("founders").select("*");
-    if (!error && data && data.length > 0) {
-      founders = (data as Founder[]).map((founder) => ({
-        ...founder,
-        image: normalizeFounderImage(founder),
-      }));
+  const { data, error } = await supabase.from("founders").select("*");
+  if (!error && data && data.length > 0) {
+    founders = data.map((founder) => ({
+      ...founder,
+      image: normalizeFounderImage(founder),
+    }));
+  } else if (error) {
+    const msg = error.message.toLowerCase();
+    const missingFoundersTable =
+      msg.includes("could not find the table") ||
+      msg.includes("relation \"public.founders\" does not exist");
+    if (!missingFoundersTable) {
+      console.error("[about] founders query error:", error.message);
     }
-  } catch {
-    // use fallback silently
   }
 
   return (

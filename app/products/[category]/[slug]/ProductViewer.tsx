@@ -85,7 +85,7 @@ export function ProductViewer({
       localStorage.setItem("oando_user_id", userId);
     }
 
-    fetch("/api/tracking", {
+    fetch("/api/tracking/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, productId: product.id }),

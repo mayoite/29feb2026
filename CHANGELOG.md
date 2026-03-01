@@ -6,12 +6,12 @@
 
 ---
 
-## 1. Rebranding: AFC → Oando / One and Only
+## 1. Rebranding: Catalog → Oando / One and Only
 
 ### 1.1 Catalog Export Rename
 
-- **`lib/catalog.ts`**: Renamed `export const afcCatalog` → `export const oandoCatalog`
-- Updated all **13 files** that imported `afcCatalog` to use `oandoCatalog`:
+- **`lib/catalog.ts`**: Renamed `export const catalogCatalog` → `export const oandoCatalog`
+- Updated all **13 files** that imported `catalogCatalog` to use `oandoCatalog`:
   - `components/layout/Header.tsx`
   - `components/home/CategoryGrid.tsx`
   - `components/home/InteractiveRoom.tsx`
@@ -23,16 +23,16 @@
 
 ### 1.2 Category IDs
 
-All category IDs in `catalog.ts` changed from `afc-` to `oando-` prefix:
+All category IDs in `catalog.ts` changed from `catalog-` to `oando-` prefix:
 | Before | After |
 |---|---|
-| `afc-workstations` | `oando-workstations` |
-| `afc-tables` | `oando-tables` |
-| `afc-storage` | `oando-storage` |
-| `afc-soft-seating` | `oando-soft-seating` |
-| `afc-seating` | `oando-seating` |
-| `afc-educational` | `oando-educational` |
-| `afc-collaborative` | `oando-collaborative` |
+| `catalog-workstations` | `oando-workstations` |
+| `catalog-tables` | `oando-tables` |
+| `catalog-storage` | `oando-storage` |
+| `catalog-soft-seating` | `oando-soft-seating` |
+| `catalog-seating` | `oando-seating` |
+| `catalog-educational` | `oando-educational` |
+| `catalog-collaborative` | `oando-collaborative` |
 
 ### 1.3 Category Display Names
 
@@ -51,25 +51,25 @@ Removed "Oando" prefix from display names so they read cleanly:
 
 ### 1.5 Product IDs in `data/products.ts`
 
-- Changed all `afc-ws-*`, `afc-ch-*`, `afc-tb-*` product IDs to `oando-ws-*`, `oando-ch-*`, `oando-tb-*`
+- Changed all `catalog-ws-*`, `catalog-ch-*`, `catalog-tb-*` product IDs to `oando-ws-*`, `oando-ch-*`, `oando-tb-*`
 
 ### 1.6 Text Content Cleanup
 
-- **`lib/catalog.ts`**: Replaced `"AFC India"` → `"One and Only"` in all product descriptions
-- **`lib/catalog.ts`**: Replaced `afcindia.in` → `oando.co.in` in metadata source URLs
+- **`lib/catalog.ts`**: Replaced `"Catalog India"` → `"One and Only"` in all product descriptions
+- **`lib/catalog.ts`**: Replaced `catalogindia.in` → `oando.co.in` in metadata source URLs
 - **`components/bot/AdvancedBot.tsx`**:
-  - `"Enquiry for One and Only (AFC India partner)"` → `"Enquiry for One and Only"`
-  - `"One and Only x AFC workspace enquiry"` → `"One and Only workspace enquiry"`
-  - `"One and Only x AFC Assistant"` → `"One and Only Assistant"`
-- **`app/layout.tsx`**: Metadata description removed "Authorized Strategic Partner of AFC India"
-- **`components/home/AFCSection.tsx`**: Renamed function to `PartnerSection`, updated all URLs
-- **`components/home/PartnershipBanner.tsx`**: Updated all `afcindia.com` → `oando.co.in`
-- **`components/home/PartnershipSection.tsx`**: Updated all AFC URLs and alt text
-- **`components/configurator/productMapping.ts`**: Removed AFC references in comments
+  - `"Enquiry for One and Only (Catalog India partner)"` → `"Enquiry for One and Only"`
+  - `"One and Only x Catalog workspace enquiry"` → `"One and Only workspace enquiry"`
+  - `"One and Only x Catalog Assistant"` → `"One and Only Assistant"`
+- **`app/layout.tsx`**: Metadata description removed "Authorized Strategic Partner of Catalog India"
+- **`components/home/CatalogSection.tsx`**: Renamed function to `PartnerSection`, updated all URLs
+- **`components/home/PartnershipBanner.tsx`**: Updated all `catalogindia.com` → `oando.co.in`
+- **`components/home/PartnershipSection.tsx`**: Updated all Catalog URLs and alt text
+- **`components/configurator/productMapping.ts`**: Removed Catalog references in comments
 
 ### 1.7 Navigation Links Fixed
 
-All navigation links updated from `afc-` to `oando-` paths:
+All navigation links updated from `catalog-` to `oando-` paths:
 
 | File                               | Links Fixed                       |
 | ---------------------------------- | --------------------------------- |
@@ -97,14 +97,14 @@ Updated all image references from `.jpg` to `.webp` across:
 
 All image paths updated to include the correct `/images/` prefix to match the actual file structure in `public/images/products/`.
 
-### 2.3 Catalog Image Paths: `/images/afc/` → `/images/products/imported/`
+### 2.3 Catalog Image Paths: `/images/catalog/` → `/images/products/imported/`
 
 - All 100+ product `flagshipImage` paths in `catalog.ts` changed from `/images/oando/PRODUCT/1.png` to `/images/products/imported/PRODUCT/image-1.webp`
 - Products without matching imported folders were mapped to a fallback image
 
 ### 2.4 CategoryGrid Thumbnails
 
-- Updated `CATEGORY_THUMBNAILS` map keys from `afc-*` to `oando-*`
+- Updated `CATEGORY_THUMBNAILS` map keys from `catalog-*` to `oando-*`
 - Changed all thumbnail paths from `.jpg` to `.webp`
 - Switched from Next.js `Image` to `<img>` with `onError` fallback for resilience
 
@@ -207,17 +207,17 @@ The scraped product data had severely corrupted names (e.g., `"CurvivoCurvivoCur
 | `app/page.tsx`                                        | Image paths                                                 |
 | `app/products/page.tsx`                               | Image paths, broken links                                   |
 | `app/products/[category]/page.tsx`                    | Image fallback path                                         |
-| `app/products/[category]/FilterGrid.tsx`              | afcCatalog → oandoCatalog                                   |
-| `app/products/[category]/[series]/page.tsx`           | afcCatalog → oandoCatalog, AFC text                         |
-| `app/products/[category]/[series]/[product]/page.tsx` | afcCatalog → oandoCatalog                                   |
-| `app/solutions/[category]/page.tsx`                   | afcCatalog → oandoCatalog                                   |
-| `components/bot/AdvancedBot.tsx`                      | AFC text, restored deleted functions                        |
+| `app/products/[category]/FilterGrid.tsx`              | catalogCatalog → oandoCatalog                                   |
+| `app/products/[category]/[series]/page.tsx`           | catalogCatalog → oandoCatalog, Catalog text                         |
+| `app/products/[category]/[series]/[product]/page.tsx` | catalogCatalog → oandoCatalog                                   |
+| `app/solutions/[category]/page.tsx`                   | catalogCatalog → oandoCatalog                                   |
+| `components/bot/AdvancedBot.tsx`                      | Catalog text, restored deleted functions                        |
 | `components/configurator/ConfiguratorPreview.tsx`     | Image paths                                                 |
-| `components/configurator/productMapping.ts`           | AFC comments                                                |
-| `components/home/AFCSection.tsx`                      | Full rebrand                                                |
+| `components/configurator/productMapping.ts`           | Catalog comments                                                |
+| `components/home/CatalogSection.tsx`                      | Full rebrand                                                |
 | `components/home/CategoryGrid.tsx`                    | Thumbnails, image paths, oandoCatalog                       |
-| `components/home/PartnershipBanner.tsx`               | AFC URLs/text                                               |
-| `components/home/PartnershipSection.tsx`              | AFC URLs/text                                               |
+| `components/home/PartnershipBanner.tsx`               | Catalog URLs/text                                               |
+| `components/home/PartnershipSection.tsx`              | Catalog URLs/text                                               |
 | `components/layout/Header.tsx`                        | Full restore + rebrand                                      |
 | `components/layout/MobileMenu.tsx`                    | Navigation links                                            |
 | `data/products.ts`                                    | Product IDs, image paths                                    |

@@ -13,7 +13,7 @@ const FEATURED_PRODUCTS = [
     category: "Seating",
     description:
       "The next generation of ergonomic performance. Designed for movement.",
-    image: "/images/afc/oando-seating--fluid-x/image-1.webp",
+    image: "/images/catalog/oando-seating--fluid-x/image-1.webp",
     link: "/products/seating/oando-seating--fluid-x",
     theme: "light",
   },
@@ -23,7 +23,7 @@ const FEATURED_PRODUCTS = [
     category: "Workstations",
     description:
       "Modular architecture to support any way of working, anywhere.",
-    image: "/images/afc/oando-workstations--deskpro/image-1.webp",
+    image: "/images/catalog/oando-workstations--deskpro/image-1.webp",
     link: "/products/workstations/oando-workstations--deskpro",
     theme: "dark",
   },

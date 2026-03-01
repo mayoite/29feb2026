@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const FALLBACK = "/images/afc/oando-workstations--deskpro/image-1.webp";
+const FALLBACK = "/images/catalog/oando-workstations--deskpro/image-1.webp";
 
 export function CategoryImage({ src, alt }: { src: string; alt: string }) {
   const [imgSrc, setImgSrc] = useState(src || FALLBACK);

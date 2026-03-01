@@ -99,7 +99,7 @@ export function Navbar() {
   const hideDesktopSearch = isMobileMenuOpen || pathname.startsWith("/quote-cart");
 
   useEffect(() => {
-    fetch("/api/nav-categories")
+    fetch("/api/nav-categories/")
       .then((res) => res.json())
       .then((payload: { groups?: GroupedCategory[]; categories?: Array<{ id: string; name: string; count?: number }> }) => {
         if (Array.isArray(payload.groups) && payload.groups.length > 0) {
@@ -163,7 +163,7 @@ export function Navbar() {
     const timer = setTimeout(async () => {
       setSearchLoading(true);
       try {
-        const response = await fetch("/api/nav-search", {
+        const response = await fetch("/api/nav-search/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           signal: controller.signal,

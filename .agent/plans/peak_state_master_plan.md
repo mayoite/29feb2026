@@ -1,6 +1,6 @@
 # Peak State Master Plan: WINI Digital Excellence (HIGH-FIDELITY)
 
-This document is the definitive, multi-dimensional roadmap for the WINI Replication project. It mandates an elite standard of "Visual Vastness" and "Information Fidelity" inspired by global industry leaders (**Steelcase**, **Herman Miller**) and local benchmarks (**Oando**, **AFC India**).
+This document is the definitive, multi-dimensional roadmap for the WINI Replication project. It mandates an elite standard of "Visual Vastness" and "Information Fidelity" inspired by global industry leaders (**Steelcase**, **Herman Miller**) and local benchmarks (**Oando**, **Catalog India**).
 
 ---
 
@@ -44,7 +44,7 @@ _Targeting the aesthetics of Herman Miller and Steelcase._
 
 ## 3. Information Fidelity: THE MASTER CATALOG
 
-_Mapping the technical depth of afcindia.in and oando.co.in._
+_Mapping the technical depth of catalogindia.in and oando.co.in._
 
 ### A. Data Schema Requirements
 
@@ -74,7 +74,7 @@ Each product in `catalog.ts` must eventually contain:
 
 ### Phase 2: High-Fidelity Data Ingestion
 
-- [ ] Enrich `catalog.ts` using scrapers/pulls from `oando.co.in` and `afcindia.in`.
+- [ ] Enrich `catalog.ts` using scrapers/pulls from `oando.co.in` and `catalogindia.in`.
 - [ ] Integrate CAD-style wireframes for the "Dimensions" tab.
 
 ### Phase 3: The Storytelling Layers

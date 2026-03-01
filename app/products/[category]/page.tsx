@@ -5,14 +5,15 @@ import { Hero } from "@/components/home/Hero";
 import { FilterGrid } from "./FilterGrid";
 import Link from "next/link";
 import { supabase } from "@/lib/db";
+import { fetchWithSupabaseRetry } from "@/lib/supabaseSafe";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import {
-  AFC_CATEGORY_ORDER,
+  Catalog_CATEGORY_ORDER,
   buildRequestedCategoryCatalog,
-  getAfcCategoryDescription,
-  getAfcCategoryLabel,
-} from "@/lib/afcCategories";
+  getCatalogCategoryDescription,
+  getCatalogCategoryLabel,
+} from "@/lib/catalogCategories";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oando.co.in";
 
@@ -47,8 +48,8 @@ export async function generateMetadata({
     (c: CompatCategory) => c.id === redirectedId,
   );
   if (!category) return {};
-  const displayName = getAfcCategoryLabel(redirectedId, category.name);
-  const displayDescription = getAfcCategoryDescription(
+  const displayName = getCatalogCategoryLabel(redirectedId, category.name);
+  const displayDescription = getCatalogCategoryDescription(
     redirectedId,
     category.description,
   );
@@ -64,13 +65,15 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const legacyCategoryIdsPromise = supabase.from("products").select("category_id");
-  const { data, error } = await legacyCategoryIdsPromise;
-  const legacyCategoryIds =
-    error || !data
-      ? []
-      : [...new Set(data.map((p) => p.category_id).filter(Boolean))];
-  const merged = [...new Set([...AFC_CATEGORY_ORDER, ...legacyCategoryIds])];
+  const data = await fetchWithSupabaseRetry<Array<{ category_id: string | null }>>(
+    "category-static-params",
+    async () => supabase.from("products").select("category_id"),
+    [],
+  );
+  const legacyCategoryIds = [
+    ...new Set((data ?? []).map((p) => p.category_id).filter(Boolean)),
+  ];
+  const merged = [...new Set([...Catalog_CATEGORY_ORDER, ...legacyCategoryIds])];
   return merged.map((category) => ({ category }));
 }
 
@@ -110,12 +113,8 @@ export default async function CategoryPage({
           Workspace Engineering Engine - Offline
         </h1>
         <p className="max-w-md text-neutral-500 mb-8">
-          This system requires a connection to the Supabase product catalog.
-          Please ensure{" "}
-          <code className="bg-neutral-100 px-1 py-0.5 rounded">
-            NEXT_PUBLIC_SUPABASE_URL
-          </code>
-          is configured in your environment variables.
+          Product data is temporarily unavailable. You can continue from the
+          fallback product snapshot while the database reconnects.
         </p>
         <div className="flex gap-4">
           <Link
@@ -123,6 +122,12 @@ export default async function CategoryPage({
             className="px-6 py-2 bg-primary text-white text-sm tracking-widest uppercase font-bold"
           >
             Return Home
+          </Link>
+          <Link
+            href="/fallback/fallback-products.html"
+            className="px-6 py-2 border border-neutral-300 text-neutral-800 text-sm tracking-widest uppercase font-bold"
+          >
+            Open Fallback
           </Link>
         </div>
       </div>
@@ -134,8 +139,8 @@ export default async function CategoryPage({
   }
   const normalizedCategory: CompatCategory = {
     ...category,
-    name: getAfcCategoryLabel(categoryId, category.name),
-    description: getAfcCategoryDescription(categoryId, category.description),
+    name: getCatalogCategoryLabel(categoryId, category.name),
+    description: getCatalogCategoryDescription(categoryId, category.description),
   };
 
   const firstProductWithImage = normalizedCategory.series

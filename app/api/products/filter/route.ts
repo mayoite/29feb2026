@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Fuse from "fuse.js";
-import { buildRequestedCategoryCatalog } from "@/lib/afcCategories";
+import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
 import { getCatalog, type CompatProduct } from "@/lib/getProducts";
 import {
   PRICE_RANGES,

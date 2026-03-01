@@ -133,7 +133,7 @@ const newCatalog = catalog.map(category => ({
     }))
 }));
 
-const tsContent = interfaceDefinitions + "export const afcCatalog: Category[] = " + JSON.stringify(newCatalog, null, 4) + ";\n";
+const tsContent = interfaceDefinitions + "export const catalogCatalog: Category[] = " + JSON.stringify(newCatalog, null, 4) + ";\n";
 
 fs.writeFileSync(outputPath, tsContent, 'utf-8');
 console.log('Successfully migrated catalog.ts to the new Product interface.');

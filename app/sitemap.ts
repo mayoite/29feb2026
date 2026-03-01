@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getCatalog } from "@/lib/getProducts";
-import { buildRequestedCategoryCatalog } from "@/lib/afcCategories";
+import { buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
 
 const BASE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ||

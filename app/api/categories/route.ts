@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCatalog } from "@/lib/getProducts";
-import { AFC_CATEGORY_ORDER, buildRequestedCategoryCatalog } from "@/lib/afcCategories";
+import { Catalog_CATEGORY_ORDER, buildRequestedCategoryCatalog } from "@/lib/catalogCategories";
 
 export async function GET() {
   try {
@@ -16,8 +16,8 @@ export async function GET() {
         ),
       }))
       .sort((a, b) => {
-        const aIdx = AFC_CATEGORY_ORDER.indexOf(a.id as (typeof AFC_CATEGORY_ORDER)[number]);
-        const bIdx = AFC_CATEGORY_ORDER.indexOf(b.id as (typeof AFC_CATEGORY_ORDER)[number]);
+        const aIdx = Catalog_CATEGORY_ORDER.indexOf(a.id as (typeof Catalog_CATEGORY_ORDER)[number]);
+        const bIdx = Catalog_CATEGORY_ORDER.indexOf(b.id as (typeof Catalog_CATEGORY_ORDER)[number]);
         const aRank = aIdx === -1 ? Number.MAX_SAFE_INTEGER : aIdx;
         const bRank = bIdx === -1 ? Number.MAX_SAFE_INTEGER : bIdx;
         return aRank - bRank;

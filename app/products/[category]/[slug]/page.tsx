@@ -1,10 +1,12 @@
 import { supabase } from "@/lib/db";
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { ProductViewer } from "./ProductViewer";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import type { Product, CompatProduct, ProductVariant } from "@/lib/getProducts";
-import { classifyToRequestedCategory } from "@/lib/afcCategories";
+import { classifyToRequestedCategory } from "@/lib/catalogCategories";
+import { fetchWithSupabaseRetry } from "@/lib/supabaseSafe";
+import { normalizeAssetList, normalizeAssetPath } from "@/lib/assetPaths";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.oando.co.in";
 
@@ -71,19 +73,20 @@ function resolveRequestedCategoryId(
 }
 
 export async function generateStaticParams() {
-  const { data, error } = await supabase
-    .from("products")
-    .select(
-      "id, slug, category_id, name, description, metadata, series_name, images, flagship_image",
-    );
-  if (error || !data) {
-    console.error("Error fetching products for static params:", error);
-    return [];
-  }
+  const data = await fetchWithSupabaseRetry<CategoryResolutionRow[]>(
+    "product-static-params",
+    async () =>
+      supabase
+        .from("products")
+        .select(
+          "id, slug, category_id, name, description, metadata, series_name, images, flagship_image",
+        ),
+    [],
+  );
 
   const seen = new Set<string>();
   const params: Array<{ category: string; slug: string }> = [];
-  for (const row of data as CategoryResolutionRow[]) {
+  for (const row of data ?? []) {
     if (!row.slug) continue;
     const category = resolveRequestedCategoryId(row);
     const key = `${category}::${row.slug}`;
@@ -101,13 +104,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { category: categoryId, slug } = await params;
 
-  const { data: product } = await supabase
-    .from("products")
-    .select(
-      "id, slug, name, description, category_id, metadata, series_name, images, flagship_image",
-    )
-    .eq("slug", slug)
-    .single();
+  const product = await fetchWithSupabaseRetry<CategoryResolutionRow>(
+    "product-metadata",
+    async () =>
+      supabase
+        .from("products")
+        .select(
+          "id, slug, name, description, category_id, metadata, series_name, images, flagship_image",
+        )
+        .eq("slug", slug)
+        .single(),
+    null,
+  );
 
   if (!product) return {};
   const resolvedCategoryId = resolveRequestedCategoryId(
@@ -121,8 +129,8 @@ export async function generateMetadata({
     `${product.name} — premium office furniture from One and Only Furniture.`;
   const images = Array.isArray(product.images) ? product.images : [];
   const image =
-    (images.length > 0 ? images[0] : null) ||
-    product.flagship_image ||
+    normalizeAssetPath(images.length > 0 ? images[0] : null) ||
+    normalizeAssetPath(product.flagship_image) ||
     "/images/fallback/category.webp";
   const url = `${BASE_URL}/products/${resolvedCategoryId}/${slug}`;
 
@@ -135,7 +143,7 @@ export async function generateMetadata({
       description,
       url,
       type: "website",
-      images: [{ url: image, width: 800, height: 800, alt: product.name }],
+      images: [{ url: image, width: 800, height: 800, alt: product.name ?? "Product image" }],
     },
     twitter: {
       card: "summary_large_image",
@@ -167,14 +175,14 @@ async function ProductContent({
   slug: string;
   fromQuery?: string;
 }) {
-  const { data: rawProduct } = await supabase
-    .from("products")
-    .select("*")
-    .eq("slug", slug)
-    .single();
+  const rawProduct = await fetchWithSupabaseRetry<Product>(
+    "product-content",
+    async () => supabase.from("products").select("*").eq("slug", slug).single(),
+    null,
+  );
 
   if (!rawProduct) {
-    notFound();
+    redirect("/fallback/fallback-products.html");
   }
 
   const p = rawProduct as Product & {
@@ -227,10 +235,12 @@ async function ProductContent({
     slug: p.slug,
     name: p.name,
     description: p.description || "",
-    flagshipImage: p.flagship_image || "",
+    flagshipImage: normalizeAssetPath(p.flagship_image),
     sceneImages: Array.isArray(p.scene_images) ? p.scene_images.filter(Boolean) : [],
-    images: p.images || [],
-    threeDModelUrl: variantList.find((v) => v.threeDModelUrl)?.threeDModelUrl,
+    images: normalizeAssetList(p.images),
+    threeDModelUrl: normalizeAssetPath(
+      variantList.find((v) => v.threeDModelUrl)?.threeDModelUrl || p["3d_model"],
+    ),
     variants: variantList,
     detailedInfo: {
       overview: p.detailed_info?.overview || aiOverview,

@@ -51,7 +51,7 @@ export default async function Home() {
             title="Sustainability at the core."
             subtitle="Future Proof Workspace"
             description="Our commitment to the environment goes beyond the surface. We engineer premium office systems using 100% recycled waste wood and low-emission materials, ensuring your workspace supports both your team and the planet."
-            imageSrc="/images/afc/oando-seating--fluid-x/image-1.webp"
+            imageSrc="/images/catalog/oando-seating--fluid-x/image-1.webp"
             imageAlt="Sustainable Premium Chair Design"
             reversed={true}
             lightMode={true}

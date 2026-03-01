@@ -54,7 +54,7 @@ export function AIAdvisor() {
     setResult(null);
 
     try {
-      const res = await fetch("/api/ai-advisor", {
+      const res = await fetch("/api/ai-advisor/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: q }),

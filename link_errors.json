@@ -1,4 +1,4 @@
-﻿{
+{
   "links": [
     {
       "url": "http://localhost:3000/",
@@ -529,7 +529,7 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "status": 200,
       "state": "OK",
       "parent": "http://localhost:3000/",
@@ -982,7 +982,7 @@
       "url": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a2e32607cc220a51bf8b9d_DESKPRO%202.jpg",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -996,21 +996,21 @@
       "url": "http://localhost:3000/_next/static/chunks/node_modules_%40google_model-viewer_lib_model-viewer_cc68f4d7.js",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
       "url": "http://localhost:3000/_next/static/chunks/node_modules_lucide-react_dist_esm_icons_8963277f._.js",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
       "url": "http://localhost:3000/_next/static/chunks/app_products_%5Bcategory%5D_%5Bid%5D_page_tsx_96d9b9a7._.js",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -1024,7 +1024,7 @@
       "url": "http://localhost:3000/_next/static/chunks/_a7159c42._.js",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -1038,7 +1038,7 @@
       "url": "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/6899a993e44404f6f3bcc398_image%20(3).png",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -1292,10 +1292,10 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2",
+      "url": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2/",
+      "parent": "http://localhost:3000/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbcatalogfc2/",
       "failureDetails": []
     },
     {
@@ -1375,7 +1375,7 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/",
+      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/",
       "status": 200,
       "state": "OK",
       "parent": "http://localhost:3000/products/oando-educational/",
@@ -2211,7 +2211,7 @@
       "url": "http://localhost:3000/images/educational/image-1.webp",
       "status": 404,
       "state": "BROKEN",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/"
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/"
     },
     {
       "url": "http://localhost:3000/images/educational/image-1.webp",
@@ -2664,10 +2664,10 @@
       "failureDetails": []
     },
     {
-      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb",
+      "url": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb",
       "status": 200,
       "state": "OK",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb/",
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb/",
       "failureDetails": []
     },
     {
@@ -3271,7 +3271,7 @@
       "url": "http://localhost:3000/images/educational/image-1.webp",
       "status": 404,
       "state": "BROKEN",
-      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bafcbf2cb"
+      "parent": "http://localhost:3000/products/oando-educational/23a7169a-15d6-40bc-a860-3d9bcatalogbf2cb"
     },
     {
       "url": "http://localhost:3000/images/collaborative/image-2.webp",

@@ -10,7 +10,7 @@ interface ScrapedProduct {
 
 const getScrapedData = (cat: string): ScrapedProduct[] => {
     try {
-        const file = fs.readFileSync(path.resolve(__dirname, `afc-${cat}.json`), 'utf-8');
+        const file = fs.readFileSync(path.resolve(__dirname, `catalog-${cat}.json`), 'utf-8');
         return JSON.parse(file);
     } catch {
         return [];

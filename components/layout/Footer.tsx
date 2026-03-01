@@ -3,14 +3,14 @@
 
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
-import { AFC_CATEGORY_ORDER, buildAfcCategoryNav } from "@/lib/afcCategories";
+import { Catalog_CATEGORY_ORDER, buildCatalogCategoryNav } from "@/lib/catalogCategories";
 
 const NAV = [
   {
     heading: "Products",
     links: [
       { href: "/products", label: "All Products" },
-      ...buildAfcCategoryNav(AFC_CATEGORY_ORDER).map((item) => ({
+      ...buildCatalogCategoryNav(Catalog_CATEGORY_ORDER).map((item) => ({
         href: item.href,
         label: item.label,
       })),

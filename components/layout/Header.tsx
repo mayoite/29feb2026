@@ -49,7 +49,7 @@ export function Header() {
   ]);
 
   useEffect(() => {
-    fetch("/api/categories")
+    fetch("/api/categories/")
       .then((r) => r.json())
       .then((cats: { id: string; name: string }[]) => {
         if (!Array.isArray(cats)) return;

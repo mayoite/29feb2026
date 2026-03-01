@@ -17,7 +17,7 @@ function localizeCdnUrls(content) {
   const cdnRegex = /https?:\/\/cdn\.prod\.website-files\.com\/[^\s"']+\/([^\s"']+\.(?:png|jpg|jpeg|webp|gif|svg))/gi;
   return content.replace(cdnRegex, (match, _filename) => {
     const fname = decodeFilenameFromUrl(match);
-    return `/images/afc/${fname}`;
+    return `/images/catalog/${fname}`;
   });
 }
 
@@ -36,7 +36,7 @@ function run() {
   }
 
   fs.writeFileSync(catalogPath, after, 'utf-8');
-  console.log('Localized CDN image URLs to /images/afc in lib/catalog.ts');
+  console.log('Localized CDN image URLs to /images/catalog in lib/catalog.ts');
 }
 
 run();
