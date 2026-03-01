@@ -3,14 +3,16 @@ import OpenAI from "openai";
 import { getProducts } from "@/lib/getProducts";
 import { supabase } from "@/lib/db";
 
-const openai = new OpenAI({
-    baseURL: "https://openrouter.ai/api/v1",
-    apiKey: process.env.OPENROUTER_API_KEY || "placeholder",
-    defaultHeaders: {
-        "HTTP-Referer": "http://localhost:3000",
-        "X-Title": "One and Only Furniture",
-    }
-});
+function createOpenRouterClient(apiKey: string) {
+    return new OpenAI({
+        baseURL: "https://openrouter.ai/api/v1",
+        apiKey,
+        defaultHeaders: {
+            "HTTP-Referer": "http://localhost:3000",
+            "X-Title": "One and Only Furniture",
+        },
+    });
+}
 
 export async function POST(req: NextRequest) {
     console.log("➡️  [ai-advisor] POST request received");
@@ -22,12 +24,15 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: "Query is required" }, { status: 400 });
         }
 
-        if (!process.env.OPENROUTER_API_KEY) {
+        const openRouterKey = process.env.OPENROUTER_API_KEY;
+        if (!openRouterKey) {
             return NextResponse.json(
                 { error: "AI advisor is not configured. Please add OPENROUTER_API_KEY." },
                 { status: 503 }
             );
         }
+
+        const openai = createOpenRouterClient(openRouterKey);
 
         // Fetch user history from Supabase if authenticated/provided
         let historyContext = "";
@@ -94,9 +99,8 @@ Respond ONLY with valid JSON in this exact shape:
         return NextResponse.json(result);
     } catch (err) {
         console.error("[ai-advisor] Error:", err);
-        const errorMessage = err instanceof Error ? err.message : String(err);
         return NextResponse.json(
-            { error: `Failed to generate recommendations: ${errorMessage}` },
+            { error: "Failed to generate recommendations. Please try again." },
             { status: 500 }
         );
     }
