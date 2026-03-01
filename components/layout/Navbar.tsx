@@ -76,6 +76,7 @@ export function Navbar() {
   const pathname = usePathname();
   const totalQty = useQuoteCart((state) => state.totalQty);
   const [scrolled, setScrolled] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDesktopMenu, setActiveDesktopMenu] = useState<string | null>(null);
   const [groupedCategories, setGroupedCategories] = useState<GroupedCategory[]>(
@@ -92,6 +93,8 @@ export function Navbar() {
   const searchPanelRef = useRef<HTMLDivElement>(null);
   const desktopSearchInputRef = useRef<HTMLInputElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const mobileMenuToggleRef = useRef<HTMLButtonElement>(null);
+  const wasMobileMenuOpenRef = useRef(false);
 
   const hideDesktopSearch = isMobileMenuOpen || pathname.startsWith("/quote-cart");
 
@@ -113,14 +116,32 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReduceMotion(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener("change", update);
+    return () => mediaQuery.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => {
+      if (reduceMotion) {
+        setParallaxOffset(0);
+        setScrolled(window.scrollY > 16);
+        return;
+      }
       const scrollY = window.scrollY;
+      const isMobile = window.innerWidth < 768;
+      const factor = isMobile ? 0.06 : 0.12;
+      const cap = isMobile ? 16 : 40;
       setScrolled(scrollY > 16);
-      setParallaxOffset(Math.min(40, scrollY * 0.12));
+      setParallaxOffset(Math.min(cap, scrollY * factor));
     };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [reduceMotion]);
 
   useEffect(() => {
     const onResize = () => {
@@ -238,6 +259,13 @@ export function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen && wasMobileMenuOpenRef.current) {
+      mobileMenuToggleRef.current?.focus();
+    }
+    wasMobileMenuOpenRef.current = isMobileMenuOpen;
+  }, [isMobileMenuOpen]);
+
   const searchSectionTitle = useMemo(() => {
     if (!searchQuery.trim()) return "Popular Links";
     if (searchLoading) return "Searching";
@@ -261,7 +289,9 @@ export function Navbar() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 top-0 h-full bg-gradient-to-b from-primary/8 to-transparent"
-          style={{ transform: `translateY(${parallaxOffset}px)` }}
+          style={{
+            transform: reduceMotion ? "translateY(0)" : `translateY(${parallaxOffset}px)`,
+          }}
         />
         <div className="container-wide relative">
           <div className="nav-shell flex h-20 items-center justify-between px-3 sm:px-4">
@@ -410,6 +440,7 @@ export function Navbar() {
               </Link>
 
               <button
+                ref={mobileMenuToggleRef}
                 type="button"
                 className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-800 lg:hidden"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}

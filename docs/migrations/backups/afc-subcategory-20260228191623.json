@@ -1,0 +1,3366 @@
+{
+  "migrationId": "afc-subcategory-20260228191623",
+  "createdAt": "2026-02-28T19:16:23.517Z",
+  "source": "afc-subcategory-v1",
+  "totalScanned": 145,
+  "totalChanged": 145,
+  "records": [
+    {
+      "id": "63a148c1-c26e-4cc1-af04-8991dbe5b4a4",
+      "slug": "oando-soft-seating--accent",
+      "name": "Accent",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Accent soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Accent soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "2997196e-457f-4c4f-8944-abf21dd04e9e",
+      "slug": "oando-workstations--sleek",
+      "name": "Sleek",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "BPO",
+          "Compact Office"
+        ],
+        "category": "workstations",
+        "material": [
+          "Steel",
+          "MFC"
+        ],
+        "priceRange": "budget",
+        "ai_alt_text": "Sleek office workstation desk system",
+        "subcategory": "Linear Workstation",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "BPO",
+          "Compact Office"
+        ],
+        "category": "Workstations",
+        "material": [
+          "Steel",
+          "MFC"
+        ],
+        "priceRange": "budget",
+        "ai_alt_text": "Sleek office workstation desk system",
+        "subcategory": "Desking Series",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "388a7402-1a0d-43bf-b3d7-38c6ed0370c8",
+      "slug": "oando-workstations--adaptable",
+      "name": "Adaptable",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Open Office",
+          "Collaborative"
+        ],
+        "category": "workstations",
+        "material": [
+          "Steel",
+          "MFC"
+        ],
+        "priceRange": "mid",
+        "ai_alt_text": "Adaptable office workstation desk system",
+        "subcategory": "Modular Workstation",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Open Office",
+          "Collaborative"
+        ],
+        "category": "Workstations",
+        "material": [
+          "Steel",
+          "MFC"
+        ],
+        "priceRange": "mid",
+        "ai_alt_text": "Adaptable office workstation desk system",
+        "subcategory": "Desking Series",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "498b16eb-c6ef-4fc2-8ece-f381ae448990",
+      "slug": "oando-workstations--fenix",
+      "name": "Fenix",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "workstations",
+        "ai_alt_text": "Fenix office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Workstations",
+        "ai_alt_text": "Fenix office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Desking Series",
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "165ed7ba-5259-494e-9a1c-c5f5a95e4ed1",
+      "slug": "oando-seating--spino",
+      "name": "Spino",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Spino ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Spino ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "efe78be9-2484-4991-ba85-f50883110d88",
+      "slug": "oando-workstations--panel-pro",
+      "name": "Panel Pro",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "workstations",
+        "ai_alt_text": "Panel Pro office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Workstations",
+        "ai_alt_text": "Panel Pro office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Panel Series",
+        "subcategory_slug": "panel-series"
+      }
+    },
+    {
+      "id": "398187b0-7910-4698-98b4-60088556cb8d",
+      "slug": "oando-tables--impulse",
+      "name": "Impulse",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Impulse office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Impulse office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "0ea7d021-1b86-4b90-a900-6e1ee4cd929e",
+      "slug": "oando-seating--smile",
+      "name": "Smile",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Smile ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Smile ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "5f2e7de8-e78c-4255-9d9c-3ce8fd1aafb9",
+      "slug": "oando-tables--opus-2",
+      "name": "Opus",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Opus office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Opus office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "0c52cc32-5be7-435d-b2d6-fd485bd523c5",
+      "slug": "oando-tables--modulus",
+      "name": "Modulus",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Modulus office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Modulus office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "da795b94-771a-459f-b0bf-2548493f5dbc",
+      "slug": "oando-seating--revoq",
+      "name": "Revoq",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Revoq ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Revoq ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "16d570b7-2ab3-4554-938a-3b7b7bc014db",
+      "slug": "oando-tables--inox",
+      "name": "Inox",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Inox office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Inox office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "48ca6e67-43b2-40ec-b290-91aeed213643",
+      "slug": "oando-seating--flex",
+      "name": "Flex",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Flex ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flex ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "028deec5-f057-4c2d-b714-ba682a25eb46",
+      "slug": "oando-tables--curvivo-meet",
+      "name": "Curvivo",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Curvivo office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Curvivo office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Training Tables",
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "24e7279d-f407-42f1-8c52-171c31a02137",
+      "slug": "oando-tables--letz-think",
+      "name": "Letz",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Letz office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Letz office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Training Tables",
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "9ed93dd6-ce59-4ebc-a6c2-5b81e5ca621d",
+      "slug": "oando-seating--logica",
+      "name": "Logica",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Logica ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Logica ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "5fb4d890-42aa-4a1f-b5e5-5c2abd6c5783",
+      "slug": "oando-tables--x-meet",
+      "name": "X Meet",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "X Meet office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "X Meet office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "58795e21-20e8-4e71-a116-529ca02bd471",
+      "slug": "oando-storage--prelam-storage",
+      "name": "Prelam",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Prelam office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Prelam office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Prelam Storage",
+        "subcategory_slug": "prelam-storage"
+      }
+    },
+    {
+      "id": "7d5e7e56-3fe5-4416-bac7-1ce38ae3bbbc",
+      "slug": "oando-seating--sullion",
+      "name": "Sullion",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Sullion ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Sullion ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "fd33ce26-2eca-4a98-a7ce-ad81a4bef27e",
+      "slug": "oando-storage--metal-locker",
+      "name": "Metal Locker",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Metal Locker office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Metal Locker office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Metal Storage",
+        "subcategory_slug": "metal-storage"
+      }
+    },
+    {
+      "id": "47b886dd-dd5c-4e10-a5e9-3818762f3c75",
+      "slug": "oando-storage--heavy-duty-racks",
+      "name": "Heavy Dut",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Heavy Dut office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Heavy Dut office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Prelam Storage",
+        "subcategory_slug": "prelam-storage"
+      }
+    },
+    {
+      "id": "6e7141e1-d856-4a94-aab7-030b46d2aaab",
+      "slug": "oando-seating--nuvic",
+      "name": "Nuvic",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Nuvic ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Nuvic ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "7ccbbec5-e514-43f3-9cbb-837dbdf04f95",
+      "slug": "oando-soft-seating--high-cafe",
+      "name": "High Cafe",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Cafeteria",
+          "Collaborative"
+        ],
+        "category": "soft-seating",
+        "priceRange": "budget",
+        "ai_alt_text": "High Cafe soft seating",
+        "subcategory": "Bar Stool",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Cafeteria",
+          "Collaborative"
+        ],
+        "category": "Soft Seating",
+        "priceRange": "budget",
+        "ai_alt_text": "High Cafe soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "90d132f0-e62e-459f-a8b8-750f81bbe765",
+      "slug": "oando-soft-seating--como",
+      "name": "Como",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Como soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Como soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "3015722e-4643-48d8-bf3b-d8f5ac765c7e",
+      "slug": "oando-soft-seating--trion",
+      "name": "Trion",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Trion soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Trion soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "812136a0-4177-45b2-828b-c55810e24671",
+      "slug": "oando-soft-seating--fynn",
+      "name": "Fynn",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Private Lounge"
+        ],
+        "category": "soft-seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Fynn soft seating",
+        "subcategory": "Lounge Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Private Lounge"
+        ],
+        "category": "Soft Seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Fynn soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "a1a59ba8-87fd-4097-b063-1d5d6dc7d386",
+      "slug": "oando-soft-seating--luna",
+      "name": "Luna",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Luna soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Luna soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "4f3fd1b5-69de-45fe-96dc-dfc037d2e1a8",
+      "slug": "oando-soft-seating--nook",
+      "name": "Nook",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Nook soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Nook soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "5b4432bd-e5f2-4e13-9dfb-b4494f42cc69",
+      "slug": "oando-collaborative--cocoon-pod",
+      "name": "Cocoon Pod",
+      "category_id": "oando-collaborative",
+      "oldMetadata": {
+        "tags": [
+          "collaborative",
+          "privacy",
+          "pods"
+        ],
+        "source": "oando.co.in",
+        "category": "collaborative",
+        "ai_alt_text": "Cocoon Pod collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "tags": [
+          "collaborative",
+          "privacy",
+          "pods"
+        ],
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cocoon Pod collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Collaborative",
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "13f1cbda-1359-458b-9e0b-6ca413841b7f",
+      "slug": "oando-soft-seating--esmor",
+      "name": "Esmor",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Esmor soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Esmor soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "7113a36a-755e-4199-8744-aba33a0d164f",
+      "slug": "oando-soft-seating--orb",
+      "name": "Orb",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Orb soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Orb soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Collaborative",
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "c68f6262-c35d-4bd4-99f7-47da149f965b",
+      "slug": "oando-soft-seating--virello",
+      "name": "Virello",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Virello soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Virello soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "17060815-d300-4674-8991-d08dec4f894b",
+      "slug": "oando-soft-seating--moon",
+      "name": "Moon",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Moon soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Moon soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "fa76ce51-1c13-4e65-901e-0d71df2e093f",
+      "slug": "oando-soft-seating--cone",
+      "name": "Cone",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Cone soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cone soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "2094fb90-429b-472b-bfd8-c9338f314d51",
+      "slug": "oando-soft-seating--velto",
+      "name": "Velto",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Velto soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Velto soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "e2d0ba62-12b0-40ca-8dc8-bb03ad311e93",
+      "slug": "oando-soft-seating--eclips",
+      "name": "Eclips",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Eclips soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Eclips soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "63c41788-3608-4013-ab6a-c27a69b24bef",
+      "slug": "oando-soft-seating--margas",
+      "name": "Margas",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Margas soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Margas soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "34e5a5be-872c-41a4-bd9a-bf057fc4cbc8",
+      "slug": "oando-soft-seating--ceda",
+      "name": "Ceda",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Ceda soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Ceda soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "acfc5d9e-8313-4e8e-9c24-f3461ca357b0",
+      "slug": "oando-soft-seating--arcana",
+      "name": "Arcana",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Arcana soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Arcana soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "5ff78724-ee6c-4be5-8217-debe2cad4976",
+      "slug": "oando-soft-seating--casca",
+      "name": "Casca",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Casca soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Casca soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "462e0cd8-3e16-436d-86b5-0346c7d1971d",
+      "slug": "oando-soft-seating--halo",
+      "name": "Halo",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Halo soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Halo soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "df761f64-d564-4ce3-886b-d75bc5e96504",
+      "slug": "oando-seating--crox",
+      "name": "Crox",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Lounge"
+        ],
+        "category": "seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Crox ergonomic office chair",
+        "subcategory": "Visitor Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Lounge"
+        ],
+        "category": "Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Crox ergonomic office chair",
+        "subcategory": "Cafe Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-chair"
+      }
+    },
+    {
+      "id": "62936096-e3af-4ccf-bb15-c26942b271f4",
+      "slug": "oando-seating--lexus",
+      "name": "Lexus",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Lexus ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Lexus ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "310d70b7-6b03-4d9d-bf44-06e6d75d4175",
+      "slug": "oando-soft-seating--covea",
+      "name": "Covea",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Covea soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Covea soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "3b3827c9-36b3-4021-a969-018ae1061886",
+      "slug": "oando-seating--halo",
+      "name": "Halo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Halo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Halo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Mesh Chair",
+        "subcategory_slug": "mesh-chair"
+      }
+    },
+    {
+      "id": "21845817-fcdd-40f6-8c9d-787d1bb0fd21",
+      "slug": "oando-seating--orbit",
+      "name": "Orbit",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Orbit ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Orbit ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "900f0318-a72b-455f-a766-e5dfc584274c",
+      "slug": "oando-seating--nordic",
+      "name": "Nordic",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Nordic ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Nordic ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "5ba6825d-a499-43c6-82e0-660858b1e515",
+      "slug": "oando-seating--fluid",
+      "name": "Fluid",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Fluid ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Fluid ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "7bf099c8-f632-4e48-b3ff-4cc906d165d0",
+      "slug": "oando-seating--toro",
+      "name": "Toro",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Toro ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Toro ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "d6a32300-b2b1-4f57-aa27-4955331c06fb",
+      "slug": "oando-seating--ember",
+      "name": "Ember",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Ember ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Ember ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "7fc0f7a4-b3fd-4dd4-8cf9-59e3c993c84b",
+      "slug": "oando-seating--rider",
+      "name": "Rider",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Rider ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rider ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "3b243285-4228-41c7-ae31-1a9f12ba3ff3",
+      "slug": "oando-seating--solace",
+      "name": "Solace",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Solace ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Solace ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "d032563f-1b5b-49dd-8ad2-eb524814f1b0",
+      "slug": "oando-seating--rio",
+      "name": "Rio",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Rio ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rio ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "77716082-57fe-41cd-a22a-3f7a4cdc8c19",
+      "slug": "oando-tables--desk-meet",
+      "name": "Desk-Meet",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Desk-Meet office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Desk-Meet office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "7a582060-a7d1-43fd-9e29-334d7e50d54d",
+      "slug": "oando-seating--dive",
+      "name": "Dive",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Dive ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Dive ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "593198de-3182-4503-bfac-2327a90f35f7",
+      "slug": "oando-seating--wing",
+      "name": "Wing",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Wing ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Wing ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "25a3e38f-7b6f-48ac-aa3a-03341fb5b544",
+      "slug": "oando-seating--casca",
+      "name": "Casca",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Casca ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Casca ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "b8ad7d2b-0f9b-4a2c-88e1-a1a2596b20e2",
+      "slug": "oando-seating--leaf",
+      "name": "Leaf",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Leaf ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Leaf ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "a3800dab-a569-4555-a806-02d704cf9141",
+      "slug": "oando-seating--flare",
+      "name": "Flare",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Flare ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flare ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "53c16f7c-7b2c-44bd-9011-befe05003038",
+      "slug": "oando-soft-seating--twig",
+      "name": "Twig",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Twig soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Twig soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "9cc1e4fd-18c1-4d02-a0ec-7ae8fbfa155c",
+      "slug": "oando-soft-seating--relax",
+      "name": "Relax",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Relax soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Relax soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "360f4040-21eb-4555-912f-3bcfb9bdd339",
+      "slug": "oando-storage--prelam-locker",
+      "name": "Wooden",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Wooden office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Wooden office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Prelam Storage",
+        "subcategory_slug": "prelam-storage"
+      }
+    },
+    {
+      "id": "5a6ccb02-45b2-4ee1-b721-4e0ce36ab382",
+      "slug": "oando-soft-seating--plumb",
+      "name": "Plumb",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Plumb soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Plumb soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "edb5b61a-1680-4a28-808a-0524309fca9d",
+      "slug": "oando-storage--pedestal",
+      "name": "Prelam",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Prelam office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Prelam office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Prelam Storage",
+        "subcategory_slug": "prelam-storage"
+      }
+    },
+    {
+      "id": "e2aad7b5-cf88-41b9-8870-4a68e1e42f89",
+      "slug": "oando-soft-seating--adam",
+      "name": "Adam",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Adam soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Adam soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "28bce7ed-425e-4643-8988-208751c6bf29",
+      "slug": "oando-storage--compactor",
+      "name": "Compactor",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Compactor office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Compactor office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Compactor Storage",
+        "subcategory_slug": "compactor-storage"
+      }
+    },
+    {
+      "id": "713521ea-af2c-4a99-88be-f641ada9a642",
+      "slug": "oando-soft-seating--cozy",
+      "name": "Cozy",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Cozy soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cozy soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "b8e604f1-8382-42e8-9901-9dfb9ba64680",
+      "slug": "oando-storage--metal-storages",
+      "name": "Metal",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Metal office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Metal office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Metal Storage",
+        "subcategory_slug": "metal-storage"
+      }
+    },
+    {
+      "id": "246e75c0-17ea-4872-aa6b-c17c17d1e633",
+      "slug": "oando-seating--cafe-sleek",
+      "name": "Sleek Cafe",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Cafeteria",
+          "Pantry"
+        ],
+        "category": "seating",
+        "priceRange": "budget",
+        "ai_alt_text": "Sleek Cafe ergonomic office chair",
+        "isStackable": true,
+        "subcategory": "Cafe Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Cafeteria",
+          "Pantry"
+        ],
+        "category": "Seating",
+        "priceRange": "budget",
+        "ai_alt_text": "Sleek Cafe ergonomic office chair",
+        "isStackable": true,
+        "subcategory": "Cafe Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-chair"
+      }
+    },
+    {
+      "id": "4933e887-6ba1-40a2-935b-ad7015651ed4",
+      "slug": "oando-educational--connecta",
+      "name": "Connecta",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Connecta educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Connecta educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "b08e15f9-5ef8-49f4-97d5-e1c3ecd08974",
+      "slug": "oando-soft-seating--padora",
+      "name": "Padora",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Padora soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Padora soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "126acd5e-a4d5-4a86-80dd-cc5e7ad56964",
+      "slug": "oando-seating--myel",
+      "name": "Myel",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Myel ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Myel ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "23a7169a-15d6-40bc-a860-3d9bafcbf2cb",
+      "slug": "oando-educational--audi-chair",
+      "name": "Audi Chair",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Audi Chair educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Audi Chair educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "8d9d85a1-5c0f-4527-bb42-6df9d342bb94",
+      "slug": "oando-seating--flip",
+      "name": "Flip",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Flip ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Flip ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Training Chair",
+        "subcategory_slug": "training-chair"
+      }
+    },
+    {
+      "id": "8c71fd5d-8460-428b-9b20-4af238b3589a",
+      "slug": "oando-workstations--curvivo",
+      "name": "Curvivo",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Executive Office",
+          "Focused Work"
+        ],
+        "category": "workstations",
+        "material": [
+          "Steel",
+          "MDF",
+          "Melamine"
+        ],
+        "priceRange": "premium",
+        "ai_alt_text": "Curvivo office workstation desk system",
+        "subcategory": "Linear Workstation",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Executive Office",
+          "Focused Work"
+        ],
+        "category": "Workstations",
+        "material": [
+          "Steel",
+          "MDF",
+          "Melamine"
+        ],
+        "priceRange": "premium",
+        "ai_alt_text": "Curvivo office workstation desk system",
+        "subcategory": "Desking Series",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "dd5e6254-462f-4f6c-905d-71d00c5f2ead",
+      "slug": "oando-seating--sway",
+      "name": "Sway",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Sway ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Sway ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "9aea071d-f393-4243-aa8e-8efcdbafcfc2",
+      "slug": "oando-workstations--deskpro",
+      "name": "DeskPro",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Corner Office",
+          "Managerial"
+        ],
+        "category": "workstations",
+        "material": [
+          "Metal",
+          "Laminate"
+        ],
+        "priceRange": "mid",
+        "ai_alt_text": "DeskPro office workstation desk system",
+        "subcategory": "L-Shaped Workstation",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Corner Office",
+          "Managerial"
+        ],
+        "category": "Workstations",
+        "material": [
+          "Metal",
+          "Laminate"
+        ],
+        "priceRange": "mid",
+        "ai_alt_text": "DeskPro office workstation desk system",
+        "subcategory": "Desking Series",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "5c4f31d4-251e-4289-95ac-b522d5b7c97d",
+      "slug": "oando-soft-seating--nuvora",
+      "name": "Nuvora",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Nuvora soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Nuvora soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "99678116-151d-48d6-b3af-6cbaddcf7146",
+      "slug": "oando-seating--arvo",
+      "name": "Arvo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Arvo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Arvo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "ae27c24b-eee6-4592-aede-e02a973f0fc8",
+      "slug": "oando-workstations--trio-2",
+      "name": "Trio",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "workstations",
+        "ai_alt_text": "Trio office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Workstations",
+        "ai_alt_text": "Trio office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Desking Series",
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "04778bb5-1e3b-4ca4-9a05-e62e0bf2ca1e",
+      "slug": "oando-soft-seating--opera",
+      "name": "Opera",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Opera soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Opera soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "d5a26f6b-51f8-4dab-ac95-7eb4246b5fb5",
+      "slug": "oando-seating--pinnacle",
+      "name": "Pinnacle",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Pinnacle ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Pinnacle ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "5cd136df-1936-49d5-a01d-da7473d1622b",
+      "slug": "oando-workstations--x-bench",
+      "name": "X Bench",
+      "category_id": "oando-workstations",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "workstations",
+        "ai_alt_text": "X Bench office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Workstations",
+        "ai_alt_text": "X Bench office workstation desk system",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Desking Series",
+        "subcategory_slug": "desking-series"
+      }
+    },
+    {
+      "id": "ec91839f-eb1d-4ede-bc58-e5787019d3f5",
+      "slug": "oando-soft-seating--alonzo",
+      "name": "Alonzo",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Alonzo soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Alonzo soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "3477ff18-b24d-4e0c-96bb-6007b243d5fa",
+      "slug": "oando-seating--phoenix",
+      "name": "Phoenix",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Phoenix ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Phoenix ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "21392e93-fd7d-4572-9d6d-ceacbbd4a6f7",
+      "slug": "oando-tables--exquisite",
+      "name": "Exquisite",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Exquisite office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Exquisite office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "182cdcae-e8ed-4410-a496-0783f6492ad1",
+      "slug": "oando-soft-seating--spectrum",
+      "name": "Spectrum",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Spectrum soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Spectrum soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "43642a20-00cb-4349-97c4-eed6afea0b9e",
+      "slug": "oando-seating--moonlight",
+      "name": "Moonlight",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Moonlight ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Moonlight ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "6550d179-dd29-4a6d-8949-b3c82cfe9482",
+      "slug": "oando-tables--nextable",
+      "name": "NexTable",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "NexTable office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "NexTable office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "f214f703-ff09-4a19-83ad-a7f4261c10b5",
+      "slug": "oando-soft-seating--arco",
+      "name": "Arco",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Arco soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Arco soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "ee3baa73-9653-498e-877c-e5e28c14de66",
+      "slug": "oando-seating--caneva",
+      "name": "Caneva",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Caneva ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Caneva ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "28b502b8-8c93-447c-bbfa-b4d36b19ca0a",
+      "slug": "oando-tables--convesso",
+      "name": "Convesso",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Convesso office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Convesso office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "c1fc79f7-2f0b-4e13-a8b3-589bceab4f0b",
+      "slug": "oando-soft-seating--cirq",
+      "name": "Cirq",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Cirq soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cirq soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Collaborative",
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "cb4b1fd8-3f25-4d6b-8365-22a7925e4324",
+      "slug": "oando-educational--podium",
+      "name": "Podium",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Podium educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Podium educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "01a05ab3-1278-4738-b89e-69e03aa72aa0",
+      "slug": "oando-educational--xplorer",
+      "name": "Xplorer",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Xplorer educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Xplorer educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "e4de1ccd-d3ec-48a1-a667-9d791297eb2c",
+      "slug": "oando-tables--uniflip",
+      "name": "Uniflip",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Uniflip office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Uniflip office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Training Tables",
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "0d6355f9-e2f4-40b6-8e04-79e7abdbb984",
+      "slug": "oando-educational--academia",
+      "name": "Academia",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Academia educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Academia educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "8382c701-4ecd-43fd-b38f-3c371294dbd9",
+      "slug": "oando-seating--caneva-high",
+      "name": "Caneva-High",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Caneva-High ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Caneva-High ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "d5f7634a-7ea2-41fd-8c43-f96c11f986ee",
+      "slug": "oando-educational--classcraft",
+      "name": "Classcraft",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Classcraft educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Classcraft educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "edc64170-387c-4fe1-825d-7d91d69494e0",
+      "slug": "oando-tables--presidency",
+      "name": "Presidency",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Presidency office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Presidency office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "0e06693f-51de-466d-a1fb-eb91a8627b79",
+      "slug": "fluid-task",
+      "name": "Fluid Task",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "priceRange": "mid",
+        "ai_alt_text": "Fluid Task ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "priceRange": "mid",
+        "ai_alt_text": "Fluid Task ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "sustainabilityScore": 7,
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "7d0868fd-89e2-483e-933f-4d6159a9cf79",
+      "slug": "fluid-x",
+      "name": "Fluid X",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "sustainabilityScore": 8
+      },
+      "newMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "sustainabilityScore": 8,
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "789c4f7d-aaae-4296-8dba-56e18e3b8dba",
+      "slug": "oando-soft-seating--cove",
+      "name": "Cove",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Cove soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cove soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "b54d96dd-6c81-4127-ab92-0e6ec7d5cc11",
+      "slug": "oando-tables--crest",
+      "name": "Crest",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Crest office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Crest office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "b1a961c0-ae6a-4968-9951-a8d98f4cd246",
+      "slug": "oando-soft-seating--luxar",
+      "name": "Luxar",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Luxar soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Luxar soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "49be7f1d-908f-4bf9-b77c-c8c65a9caf6b",
+      "slug": "oando-soft-seating--hush",
+      "name": "Hush",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Hush soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Hush soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "07171c90-6c29-4cfe-bf62-217984a8c7e6",
+      "slug": "accent-study",
+      "name": "Accent Study Chair",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "priceRange": "budget",
+        "ai_alt_text": "Accent Study Chair educational",
+        "warrantyYears": 3,
+        "sustainabilityScore": 9
+      },
+      "newMetadata": {
+        "priceRange": "budget",
+        "ai_alt_text": "Accent Study Chair educational",
+        "warrantyYears": 3,
+        "sustainabilityScore": 9,
+        "category": "Education",
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "ebdd94ae-63df-48c4-85a1-55d24bb1233f",
+      "slug": "oando-educational--learnix",
+      "name": "Learnix",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Learnix educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Learnix educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "71bf2a2b-a6de-4564-849b-6ed653b66522",
+      "slug": "classy-executive",
+      "name": "Classy Executive",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Classy Executive ergonomic office chair",
+        "warrantyYears": 3,
+        "sustainabilityScore": 6
+      },
+      "newMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Classy Executive ergonomic office chair",
+        "warrantyYears": 3,
+        "sustainabilityScore": 6,
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "3246bfc3-3727-486a-92c3-7c2cfd640117",
+      "slug": "pedestal-3-drawer",
+      "name": "Mobile Pedestal 3-Drawer",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "priceRange": "mid",
+        "ai_alt_text": "Mobile Pedestal 3-Drawer office storage cabinet locker",
+        "warrantyYears": 5,
+        "sustainabilityScore": 8
+      },
+      "newMetadata": {
+        "priceRange": "mid",
+        "ai_alt_text": "Mobile Pedestal 3-Drawer office storage cabinet locker",
+        "warrantyYears": 5,
+        "sustainabilityScore": 8,
+        "category": "Storages",
+        "subcategory": "Prelam Storage",
+        "subcategory_slug": "prelam-storage"
+      }
+    },
+    {
+      "id": "8bf27b1e-fbf2-47f8-842e-13640e4c1365",
+      "slug": "conference-8-seater",
+      "name": "Conference Table 8-Seater",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Conference Table 8-Seater office conference table",
+        "warrantyYears": 5,
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Conference Table 8-Seater office conference table",
+        "warrantyYears": 5,
+        "sustainabilityScore": 7,
+        "category": "Tables",
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "5748e088-35fa-4c84-bbe0-89a6a9994951",
+      "slug": "cabin-l-shape",
+      "name": "Cabin L-Shape",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "category": "tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin L-Shape executive cabin table for modern office cabins",
+        "warrantyYears": 5,
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "category": "Tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin L-Shape executive cabin table for modern office cabins",
+        "warrantyYears": 5,
+        "sustainabilityScore": 7,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "901bd006-9b99-4b28-8a8d-9708d72b6500",
+      "slug": "cabin-60x30",
+      "name": "Cabin 60×30",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "category": "tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin 60x30 executive cabin table for office leadership spaces",
+        "warrantyYears": 5,
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "category": "Tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin 60x30 executive cabin table for office leadership spaces",
+        "warrantyYears": 5,
+        "sustainabilityScore": 7,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "fafe7efa-1c97-41cd-a1c1-25af39c2fba3",
+      "slug": "oando-seating--canaret",
+      "name": "Canaret",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Canaret ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Canaret ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "a9beab17-b4c6-438f-99eb-b76cb2747107",
+      "slug": "cocoon-lounge",
+      "name": "Cocoon Lounge Chair",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Cocoon Lounge Chair soft seating",
+        "warrantyYears": 3,
+        "sustainabilityScore": 8
+      },
+      "newMetadata": {
+        "priceRange": "premium",
+        "ai_alt_text": "Cocoon Lounge Chair soft seating",
+        "warrantyYears": 3,
+        "sustainabilityScore": 8,
+        "category": "Soft Seating",
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "588c643d-619c-42e0-8932-e14fcdaf908b",
+      "slug": "oando-educational--performer",
+      "name": "Performer",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Performer educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Performer educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "430d2912-47cf-4ff2-ba18-8ea60d9cda90",
+      "slug": "oando-seating--rock",
+      "name": "Rock",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Rock ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Rock ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "cc7f0ee3-38d3-40bc-ae50-4f05a5468362",
+      "slug": "oando-seating--x-mesh",
+      "name": "X Mesh",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "X Mesh ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "X Mesh ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Mesh Chair",
+        "subcategory_slug": "mesh-chair"
+      }
+    },
+    {
+      "id": "f9dcace8-5020-406a-903a-42431013a573",
+      "slug": "oando-seating--breeze",
+      "name": "Breeze",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Breeze ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Breeze ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "71d4d3a0-965b-4372-af77-a9add2cb36f8",
+      "slug": "oando-educational--metal-bed",
+      "name": "Metal Bed",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Metal Bed educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Metal Bed educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "59f233e6-d8e5-4aa0-bc5d-a38046f61e78",
+      "slug": "oando-educational--forma",
+      "name": "Forma",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Forma educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Forma educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "e330924b-2d95-47f8-aba0-8418b632330b",
+      "slug": "oando-collaborative--solace-pod",
+      "name": "Solace Pod",
+      "category_id": "oando-collaborative",
+      "oldMetadata": {
+        "tags": [
+          "collaborative",
+          "soft-seating",
+          "lounge"
+        ],
+        "source": "oando.co.in",
+        "category": "collaborative",
+        "ai_alt_text": "Solace Pod collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "tags": [
+          "collaborative",
+          "soft-seating",
+          "lounge"
+        ],
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Solace Pod collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Collaborative",
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "0f0d00a4-3bc2-4a79-b450-cb064b929a0e",
+      "slug": "oando-soft-seating--crossa",
+      "name": "Crossa",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Crossa soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Crossa soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "b608865e-45c7-4d74-946c-89351009c4c9",
+      "slug": "oando-tables--apex",
+      "name": "Apex",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Apex office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Apex office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "3d8f1253-0663-4af3-9ad7-70938dd3857a",
+      "slug": "oando-soft-seating--embrace",
+      "name": "Embrace",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Embrace soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Embrace soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Collaborative",
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "f3cf6682-920a-4f22-abb2-1ff9478280f9",
+      "slug": "oando-soft-seating--grace",
+      "name": "Grace",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Waiting Area",
+          "Lounge"
+        ],
+        "category": "soft-seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Grace soft seating",
+        "subcategory": "Lounge Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Waiting Area",
+          "Lounge"
+        ],
+        "category": "Soft Seating",
+        "priceRange": "premium",
+        "ai_alt_text": "Grace soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "92f239bb-c1ad-43d4-9413-9aed75c2f1c4",
+      "slug": "oando-soft-seating--armora",
+      "name": "Armora",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Armora soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Armora soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "097e1ca2-de87-4efd-a939-c694049ea911",
+      "slug": "oando-soft-seating--brim",
+      "name": "Brim",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Breakout",
+          "Informal Meeting"
+        ],
+        "category": "soft-seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Brim soft seating",
+        "subcategory": "Lounge Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Breakout",
+          "Informal Meeting"
+        ],
+        "category": "Soft Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Brim soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "ab257587-b46e-48ad-a730-5126be63b7a3",
+      "slug": "oando-soft-seating--tectara",
+      "name": "Tectara",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Tectara soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Tectara soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "6790c9f5-a33f-434e-816b-bd68411fa6be",
+      "slug": "oando-soft-seating--rattique",
+      "name": "Rattique",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Rattique soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Rattique soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "cc69434a-5b2b-449e-9ef8-f85992a1f91e",
+      "slug": "oando-tables--sleek-meet",
+      "name": "Sleek-Meet",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Sleek-Meet office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Sleek-Meet office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "23367301-7c81-4d70-b4f1-7bf025b9e9ae",
+      "slug": "oando-educational--magazine-rack",
+      "name": "Magazine Rack",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Magazine Rack educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Magazine Rack educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "dde10387-56a0-4d9f-8a73-cbde24e2356b",
+      "slug": "oando-tables--consulate",
+      "name": "Consulate",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Consulate office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Consulate office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "507800cd-515f-4895-a08b-29593fe7d836",
+      "slug": "oando-soft-seating--lura",
+      "name": "Lura",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Lura soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Lura soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "20524b4b-de51-4df6-a2c1-d986a879a66d",
+      "slug": "oando-seating--lisbo",
+      "name": "Lisbo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Lisbo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Lisbo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "fc9a0b2e-5175-445c-a1ab-d6ecf5a90c81",
+      "slug": "oando-educational--wooden-bed",
+      "name": "Wooden Bed",
+      "category_id": "oando-educational",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "educational",
+        "ai_alt_text": "Wooden Bed educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Wooden Bed educational",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Classroom",
+        "subcategory_slug": "classroom"
+      }
+    },
+    {
+      "id": "75a70cf3-878f-48d7-a3b0-69fa10c48af9",
+      "slug": "oando-tables--convene",
+      "name": "Convene",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Convene office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Convene office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "3fa7c7be-286b-4b3b-9df9-a780e1c9a4e5",
+      "slug": "oando-seating--fusion",
+      "name": "Fusion",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Fusion ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Fusion ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "92ea5252-b25f-4f9a-a889-866f7c63dfd9",
+      "slug": "oando-storage--metal-pedestal",
+      "name": "Metal Pedestal",
+      "category_id": "oando-storage",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "storage",
+        "ai_alt_text": "Metal Pedestal office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Metal Pedestal office storage cabinet locker",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Metal Storage",
+        "subcategory_slug": "metal-storage"
+      }
+    },
+    {
+      "id": "9e0dc775-b14d-46b7-a2ba-4e1f108ca230",
+      "slug": "oando-soft-seating--verka",
+      "name": "Verka",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Breakout"
+        ],
+        "category": "soft-seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Verka soft seating",
+        "subcategory": "Lounge Chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Reception",
+          "Breakout"
+        ],
+        "category": "Soft Seating",
+        "priceRange": "mid",
+        "ai_alt_text": "Verka soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "0bc4009e-6411-47dd-a0d9-e6690a2fd90f",
+      "slug": "oando-soft-seating--cocoon",
+      "name": "Cocoon",
+      "category_id": "oando-soft-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "soft-seating",
+        "ai_alt_text": "Cocoon soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cocoon soft seating",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Lounge",
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "542941de-0ae6-4222-ba00-f2d972eca38b",
+      "slug": "oando-seating--zilo",
+      "name": "Zilo",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "seating",
+        "ai_alt_text": "Zilo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Seating",
+        "ai_alt_text": "Zilo ergonomic office chair",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    },
+    {
+      "id": "9f78b4c0-9f2c-4769-93b3-c59f52cd189a",
+      "slug": "oando-tables--sleek-tab",
+      "name": "Sleek",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Sleek office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Sleek office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Meeting Tables",
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "70632935-93d7-4f5e-b426-8182eb8554dd",
+      "slug": "oando-tables--stake",
+      "name": "Stake",
+      "category_id": "oando-tables",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "tables",
+        "ai_alt_text": "Stake office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Stake office conference table",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory": "Cabin Tables",
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
+      "slug": "oando-seating--fluid-x",
+      "name": "Fluid X",
+      "category_id": "oando-seating",
+      "oldMetadata": {
+        "ai_alt_text": "Fluid X ergonomic office chair"
+      },
+      "newMetadata": {
+        "ai_alt_text": "Fluid X ergonomic office chair",
+        "category": "Seating",
+        "subcategory": "Leather Chair",
+        "subcategory_slug": "leather-chair"
+      }
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "migrationId": "full-afc-map-20260228194713",
+  "createdAt": "2026-02-28T19:47:13.197Z",
+  "source": "full-afc-slug-map-v1",
+  "totalScanned": 145,
+  "records": [
+    {
+      "id": "388a7402-1a0d-43bf-b3d7-38c6ed0370c8",
+      "slug": "oando-workstations--adaptable",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Open Office",
+          "Collaborative"
+        ],
+        "category": "Workstations",
+        "material": [
+          "Steel",
+          "MFC"
+        ],
+        "priceRange": "mid",
+        "ai_alt_text": "Adaptable office workstation desk system",
+        "subcategory": "Desking Series",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "desking-series"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "useCase": [
+          "Open Office",
+          "Collaborative"
+        ],
+        "category": "Workstations",
+        "material": [
+          "Steel",
+          "MFC"
+        ],
+        "priceRange": "mid",
+        "ai_alt_text": "Adaptable office workstation desk system",
+        "subcategory": "Height Adjustable Series",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "height-adjustable-series"
+      }
+    },
+    {
+      "id": "47b886dd-dd5c-4e10-a5e9-3818762f3c75",
+      "slug": "oando-storage--heavy-duty-racks",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Heavy Dut office storage cabinet locker",
+        "subcategory": "Prelam Storage",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "prelam-storage"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Storages",
+        "ai_alt_text": "Heavy Dut office storage cabinet locker",
+        "subcategory": "Metal Storage",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "metal-storage"
+      }
+    },
+    {
+      "id": "3015722e-4643-48d8-bf3b-d8f5ac765c7e",
+      "slug": "oando-soft-seating--trion",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Trion soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Trion soft seating",
+        "subcategory": "Pouffee",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "pouffee"
+      }
+    },
+    {
+      "id": "90d132f0-e62e-459f-a8b8-750f81bbe765",
+      "slug": "oando-soft-seating--como",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Como soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Como soft seating",
+        "subcategory": "Sofa",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "sofa"
+      }
+    },
+    {
+      "id": "7113a36a-755e-4199-8744-aba33a0d164f",
+      "slug": "oando-soft-seating--orb",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Orb soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Orb soft seating",
+        "subcategory": "Pouffee",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "pouffee"
+      }
+    },
+    {
+      "id": "13f1cbda-1359-458b-9e0b-6ca413841b7f",
+      "slug": "oando-soft-seating--esmor",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Esmor soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Esmor soft seating",
+        "subcategory": "Sofa",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "sofa"
+      }
+    },
+    {
+      "id": "2094fb90-429b-472b-bfd8-c9338f314d51",
+      "slug": "oando-soft-seating--velto",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Velto soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Velto soft seating",
+        "subcategory": "Sofa",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "sofa"
+      }
+    },
+    {
+      "id": "17060815-d300-4674-8991-d08dec4f894b",
+      "slug": "oando-soft-seating--moon",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Moon soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Moon soft seating",
+        "subcategory": "Pouffee",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "pouffee"
+      }
+    },
+    {
+      "id": "4933e887-6ba1-40a2-935b-ad7015651ed4",
+      "slug": "oando-educational--connecta",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Connecta educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Connecta educational",
+        "subcategory": "Library",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "library"
+      }
+    },
+    {
+      "id": "23a7169a-15d6-40bc-a860-3d9bafcbf2cb",
+      "slug": "oando-educational--audi-chair",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Audi Chair educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Audi Chair educational",
+        "subcategory": "Auditorium",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "auditorium"
+      }
+    },
+    {
+      "id": "b08e15f9-5ef8-49f4-97d5-e1c3ecd08974",
+      "slug": "oando-soft-seating--padora",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Padora soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Padora soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "5c4f31d4-251e-4289-95ac-b522d5b7c97d",
+      "slug": "oando-soft-seating--nuvora",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Nuvora soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Nuvora soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "04778bb5-1e3b-4ca4-9a05-e62e0bf2ca1e",
+      "slug": "oando-soft-seating--opera",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Opera soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Opera soft seating",
+        "subcategory": "Pouffee",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "pouffee"
+      }
+    },
+    {
+      "id": "ec91839f-eb1d-4ede-bc58-e5787019d3f5",
+      "slug": "oando-soft-seating--alonzo",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Alonzo soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Alonzo soft seating",
+        "subcategory": "Sofa",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "sofa"
+      }
+    },
+    {
+      "id": "182cdcae-e8ed-4410-a496-0783f6492ad1",
+      "slug": "oando-soft-seating--spectrum",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Spectrum soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Spectrum soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "cb4b1fd8-3f25-4d6b-8365-22a7925e4324",
+      "slug": "oando-educational--podium",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Podium educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Podium educational",
+        "subcategory": "Auditorium",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "auditorium"
+      }
+    },
+    {
+      "id": "789c4f7d-aaae-4296-8dba-56e18e3b8dba",
+      "slug": "oando-soft-seating--cove",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cove soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cove soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      }
+    },
+    {
+      "id": "71d4d3a0-965b-4372-af77-a9add2cb36f8",
+      "slug": "oando-educational--metal-bed",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Metal Bed educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Metal Bed educational",
+        "subcategory": "Hostel",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "hostel"
+      }
+    },
+    {
+      "id": "59f233e6-d8e5-4aa0-bc5d-a38046f61e78",
+      "slug": "oando-educational--forma",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Forma educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Forma educational",
+        "subcategory": "Library",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "library"
+      }
+    },
+    {
+      "id": "49be7f1d-908f-4bf9-b77c-c8c65a9caf6b",
+      "slug": "oando-soft-seating--hush",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Hush soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Hush soft seating",
+        "subcategory": "Sofa",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "sofa"
+      }
+    },
+    {
+      "id": "3d8f1253-0663-4af3-9ad7-70938dd3857a",
+      "slug": "oando-soft-seating--embrace",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Embrace soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Embrace soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      }
+    },
+    {
+      "id": "92f239bb-c1ad-43d4-9413-9aed75c2f1c4",
+      "slug": "oando-soft-seating--armora",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Armora soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Armora soft seating",
+        "subcategory": "Sofa",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "sofa"
+      }
+    },
+    {
+      "id": "23367301-7c81-4d70-b4f1-7bf025b9e9ae",
+      "slug": "oando-educational--magazine-rack",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Magazine Rack educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Magazine Rack educational",
+        "subcategory": "Library",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "library"
+      }
+    },
+    {
+      "id": "507800cd-515f-4895-a08b-29593fe7d836",
+      "slug": "oando-soft-seating--lura",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Lura soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Lura soft seating",
+        "subcategory": "Pouffee",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "pouffee"
+      }
+    },
+    {
+      "id": "fc9a0b2e-5175-445c-a1ab-d6ecf5a90c81",
+      "slug": "oando-educational--wooden-bed",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Wooden Bed educational",
+        "subcategory": "Classroom",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "classroom"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Education",
+        "ai_alt_text": "Wooden Bed educational",
+        "subcategory": "Hostel",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "hostel"
+      }
+    },
+    {
+      "id": "0bc4009e-6411-47dd-a0d9-e6690a2fd90f",
+      "slug": "oando-soft-seating--cocoon",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cocoon soft seating",
+        "subcategory": "Lounge",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "lounge"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Soft Seating",
+        "ai_alt_text": "Cocoon soft seating",
+        "subcategory": "Collaborative",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "collaborative"
+      }
+    }
+  ]
+}

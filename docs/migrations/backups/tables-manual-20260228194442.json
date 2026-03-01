@@ -1,0 +1,514 @@
+{
+  "migrationId": "tables-manual-20260228194442",
+  "createdAt": "2026-02-28T19:44:42.229Z",
+  "source": "manual-tables-split-v1",
+  "totalScanned": 23,
+  "records": [
+    {
+      "id": "b608865e-45c7-4d74-946c-89351009c4c9",
+      "slug": "oando-tables--apex",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Apex office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Apex office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "901bd006-9b99-4b28-8a8d-9708d72b6500",
+      "slug": "cabin-60x30",
+      "oldMetadata": {
+        "category": "Tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin 60x30 executive cabin table for office leadership spaces",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "subcategory_slug": "meeting-tables",
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "category": "Tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin 60x30 executive cabin table for office leadership spaces",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "subcategory_slug": "cabin-tables",
+        "sustainabilityScore": 7
+      }
+    },
+    {
+      "id": "5748e088-35fa-4c84-bbe0-89a6a9994951",
+      "slug": "cabin-l-shape",
+      "oldMetadata": {
+        "category": "Tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin L-Shape executive cabin table for modern office cabins",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "subcategory_slug": "meeting-tables",
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "category": "Tables",
+        "priceRange": "mid",
+        "ai_alt_text": "Cabin L-Shape executive cabin table for modern office cabins",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "subcategory_slug": "cabin-tables",
+        "sustainabilityScore": 7
+      }
+    },
+    {
+      "id": "8bf27b1e-fbf2-47f8-842e-13640e4c1365",
+      "slug": "conference-8-seater",
+      "oldMetadata": {
+        "category": "Tables",
+        "priceRange": "premium",
+        "ai_alt_text": "Conference Table 8-Seater office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "subcategory_slug": "meeting-tables",
+        "sustainabilityScore": 7
+      },
+      "newMetadata": {
+        "category": "Tables",
+        "priceRange": "premium",
+        "ai_alt_text": "Conference Table 8-Seater office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "subcategory_slug": "cabin-tables",
+        "sustainabilityScore": 7
+      }
+    },
+    {
+      "id": "dde10387-56a0-4d9f-8a73-cbde24e2356b",
+      "slug": "oando-tables--consulate",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Consulate office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Consulate office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "75a70cf3-878f-48d7-a3b0-69fa10c48af9",
+      "slug": "oando-tables--convene",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Convene office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Convene office conference table",
+        "subcategory": "Cafe Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-tables"
+      }
+    },
+    {
+      "id": "28b502b8-8c93-447c-bbfa-b4d36b19ca0a",
+      "slug": "oando-tables--convesso",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Convesso office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Convesso office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "b54d96dd-6c81-4127-ab92-0e6ec7d5cc11",
+      "slug": "oando-tables--crest",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Crest office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Crest office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "028deec5-f057-4c2d-b714-ba682a25eb46",
+      "slug": "oando-tables--curvivo-meet",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Curvivo office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Curvivo office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "77716082-57fe-41cd-a22a-3f7a4cdc8c19",
+      "slug": "oando-tables--desk-meet",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Desk-Meet office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Desk-Meet office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "21392e93-fd7d-4572-9d6d-ceacbbd4a6f7",
+      "slug": "oando-tables--exquisite",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Exquisite office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Exquisite office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "398187b0-7910-4698-98b4-60088556cb8d",
+      "slug": "oando-tables--impulse",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Impulse office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Impulse office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "16d570b7-2ab3-4554-938a-3b7b7bc014db",
+      "slug": "oando-tables--inox",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Inox office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Inox office conference table",
+        "subcategory": "Cafe Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-tables"
+      }
+    },
+    {
+      "id": "24e7279d-f407-42f1-8c52-171c31a02137",
+      "slug": "oando-tables--letz-think",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Letz office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Letz office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "0c52cc32-5be7-435d-b2d6-fd485bd523c5",
+      "slug": "oando-tables--modulus",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Modulus office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Modulus office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "6550d179-dd29-4a6d-8949-b3c82cfe9482",
+      "slug": "oando-tables--nextable",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "NexTable office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "NexTable office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "5f2e7de8-e78c-4255-9d9c-3ce8fd1aafb9",
+      "slug": "oando-tables--opus-2",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Opus office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Opus office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "edc64170-387c-4fe1-825d-7d91d69494e0",
+      "slug": "oando-tables--presidency",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Presidency office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Presidency office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "9f78b4c0-9f2c-4769-93b3-c59f52cd189a",
+      "slug": "oando-tables--sleek-tab",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Sleek office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Sleek office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      }
+    },
+    {
+      "id": "cc69434a-5b2b-449e-9ef8-f85992a1f91e",
+      "slug": "oando-tables--sleek-meet",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Sleek-Meet office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Sleek-Meet office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    },
+    {
+      "id": "70632935-93d7-4f5e-b426-8182eb8554dd",
+      "slug": "oando-tables--stake",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Stake office conference table",
+        "subcategory": "Cabin Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cabin-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Stake office conference table",
+        "subcategory": "Cafe Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "cafe-tables"
+      }
+    },
+    {
+      "id": "e4de1ccd-d3ec-48a1-a667-9d791297eb2c",
+      "slug": "oando-tables--uniflip",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Uniflip office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "Uniflip office conference table",
+        "subcategory": "Training Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "training-tables"
+      }
+    },
+    {
+      "id": "5fb4d890-42aa-4a1f-b5e5-5c2abd6c5783",
+      "slug": "oando-tables--x-meet",
+      "oldMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "X Meet office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      },
+      "newMetadata": {
+        "source": "oando.co.in",
+        "category": "Tables",
+        "ai_alt_text": "X Meet office conference table",
+        "subcategory": "Meeting Tables",
+        "warrantyYears": 5,
+        "bifmaCertified": true,
+        "subcategory_slug": "meeting-tables"
+      }
+    }
+  ]
+}
