@@ -1,9 +1,0 @@
-Task1
-
-Next.js project, revise the Supabase schema to prevent image mismatches by adding 'images' jsonb array and 'category_id' foreign key to the 'products' table, ensuring paths are category-prefixed (e.g., /images/tables/conference.webp). Create migration scripts/002_image_mapping.sql: ALTER TABLE products ADD COLUMN images JSONB, ADD COLUMN category_id UUID REFERENCES categories(id); Define 'categories' table if missing: CREATE TABLE categories (id UUID PRIMARY KEY, name TEXT); Seed categories with names like 'oando-tables', 'oando-storage'. Update seed.ts to map images from catalog.ts, batching inserts for efficiency: const products = oandoCatalog; await supabase.from('products').insert(products.map(p => ({...p, images: p.images.map(img => /images/${p.category}/${img})}))); Handle 136+ items in chunks of 50 to avoid API limits. In app/products/[category]/page.tsx, fetch with join: await supabase.from('products').select('*, categories(name)').eq('categories.name', params.category); Render with fallback src="/images/fallback/category.webp". Test for no chair paths in tables by querying Supabase dashboard. Phase 1: Write and push migration. Phase 2: Seed categories and products. Phase 3: Update server fetches. Phase 4: Add rendering logic with fallbacks. Phase 5: Audit with table and test deployment. ✅ STEP 1 COMPLETED - Migration pushed. ✅ STEP 2 COMPLETED - Data seeded. ✅ STEP 3 COMPLETED - Fetches revised. ✅ STEP 4 COMPLETED - Rendering added. ✅ STEP 5 COMPLETED - Audited and deployed. Git commit: "feat: revise schema for image mapping". Run vercel --prod to verify.
-Category	Previous Image Path	Revised Path	Mismatch Resolved	Test Status
-oando-tables	/chair.webp (fallback)	/images/tables/conference.webp	Yes	Pass
-oando-storage	/chair.webp	/images/storage/cabinet.webp	Yes	Pass
-oando-workstations	/chair.webp	/images/workstations/desk.webp	Yes	Pass
-oando-seating	/chair.webp	/images/seating/task.webp	No (correct)	Pass
-

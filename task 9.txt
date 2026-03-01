@@ -1,8 +1,0 @@
-task 9
-
-Populate "Our Work" with client badges like Titan, Usha from video, using Supabase 'projects' table. Create components/ClientBadge.tsx with; Fetch and grid display. Test for no mismatches. Phase 1: Create projects table. Phase 2: Seed with clients (Titan, Usha, Bihar Govt). Phase 3: Build badge component. Phase 4: Integrate into homepage. Phase 5: Test table. ✅ STEP 1 COMPLETED - Table created. ✅ STEP 2 COMPLETED - Seeded. ✅ STEP 3 COMPLETED - Component built. ✅ STEP 4 COMPLETED - Integrated. ✅ STEP 5 COMPLETED - Tested. Git commit: "feat: trust signals with badges". Vercel --prod.
-Client	Badge Image	Description	Placement	Load Status
-Titan	/clients/titan.webp	Patna installation	Our Work	Pass
-Usha	/clients/usha.webp	Corporate excellence	Our Work	Pass
-Bihar Govt	/clients/bihar.webp	Government projects	Our Work	Pass
-TVS	/clients/tvs.webp	Automotive sector	Our Work	Pass

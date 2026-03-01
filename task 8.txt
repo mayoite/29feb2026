@@ -1,8 +1,0 @@
-task 8
-
-Add filters to /products/ page for sustainability, using fuse.js for fuzzy search on eco_score from Supabase. Install fuse.js; in components/Filter.tsx, create dropdown for score >70, integrate with query: const results = fuse.search(filterValue).map(r => r.item); Update page to render filtered products. Test on tables category. Phase 1: Install fuse.js. Phase 2: Add eco_score to schema if missing. Phase 3: Build Filter component. Phase 4: Integrate with fetches. Phase 5: Test and table. ✅ STEP 1 COMPLETED - Installed. ✅ STEP 2 COMPLETED - Schema added. ✅ STEP 3 COMPLETED - Component built. ✅ STEP 4 COMPLETED - Integrated. ✅ STEP 5 COMPLETED - Tested. Git commit: "feat: sustainability filters". Deploy.
-Filter Type	Criteria	Products Returned	Category Tested	Performance (ms)
-Eco Score >70	High sustainability	25	Tables	150
-Material Recycled	100% recycled	15	Storage	120
-BIFMA Certified	Certified only	40	Workstations	180
-All	No filter	136	Seating	100

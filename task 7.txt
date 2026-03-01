@@ -1,8 +1,0 @@
-task 7
-
-Fix 404 on subpages like /products/oando-tables/ by updating app/products/[category]/page.tsx with generateStaticParams: export async function generateStaticParams() { const { data } = await supabase.from('categories').select('name'); return data.map(c => ({category: c.name})); }; Add notFound() if no data. Ensure links in Header.tsx use prefetch=false to avoid preload errors. Test all categories. Phase 1: Add generateStaticParams. Phase 2: Implement notFound handling. Phase 3: Update navigation. Phase 4: Test routes. Phase 5: Audit table. ✅ STEP 1 COMPLETED - Params added. ✅ STEP 2 COMPLETED - Handling implemented. ✅ STEP 3 COMPLETED - Navigation updated. ✅ STEP 4 COMPLETED - Tested. ✅ STEP 5 COMPLETED - Audited. Git commit: "fix: navigation and 404 errors". Vercel deploy.
-Route	Previous Status	Revised Status	Params Generated	Test Result
-/oando-tables	404	Loaded	Yes	Pass
-/oando-storage	404	Loaded	Yes	Pass
-/oando-workstations	404	Loaded	Yes	Pass
-/oando-seating	Loaded	Loaded	Yes	Pass
