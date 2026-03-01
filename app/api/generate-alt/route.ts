@@ -4,6 +4,122 @@ import OpenAI from "openai";
 type CategoryConfig = { label: string; avoid: string[] };
 
 const CATEGORY_CONTEXT: Record<string, CategoryConfig> = {
+  seating: {
+    label: "ergonomic office seating",
+    avoid: ["table", "storage", "locker"],
+  },
+  workstations: {
+    label: "modular workstation desk system",
+    avoid: ["chair", "sofa", "locker"],
+  },
+  tables: {
+    label: "office table system",
+    avoid: ["chair", "storage", "locker"],
+  },
+  storages: {
+    label: "office storage cabinet and locker system",
+    avoid: ["chair", "table", "sofa"],
+  },
+  "soft-seating": {
+    label: "soft seating lounge furniture",
+    avoid: ["workstation", "locker", "storage"],
+  },
+  education: {
+    label: "education furniture system",
+    avoid: ["workstation", "lounge", "sofa"],
+  },
+  "mesh-chair": {
+    label: "mesh ergonomic office chair",
+    avoid: ["table", "storage"],
+  },
+  "leather-chair": {
+    label: "premium leather office chair",
+    avoid: ["table", "storage"],
+  },
+  "study-chair": {
+    label: "training and study office chair",
+    avoid: ["table", "locker"],
+  },
+  "cafe-chair": {
+    label: "cafe and breakout seating chair",
+    avoid: ["workstation", "locker"],
+  },
+  "height-adjustable-series": {
+    label: "height adjustable workstation desk",
+    avoid: ["chair", "locker"],
+  },
+  "desking-series": {
+    label: "modular desking workstation",
+    avoid: ["chair", "locker"],
+  },
+  "panel-series": {
+    label: "panel based workstation system",
+    avoid: ["chair", "lounge"],
+  },
+  "cabin-tables": {
+    label: "executive cabin office table",
+    avoid: ["chair", "storage"],
+  },
+  "meeting-tables": {
+    label: "meeting and conference table",
+    avoid: ["chair", "storage"],
+  },
+  "training-tables": {
+    label: "training room table",
+    avoid: ["chair", "locker"],
+  },
+  "cafe-tables": {
+    label: "cafe and breakout table",
+    avoid: ["chair", "storage"],
+  },
+  "prelam-storage": {
+    label: "prelam office storage cabinet",
+    avoid: ["chair", "table"],
+  },
+  "metal-storage": {
+    label: "metal office storage cabinet",
+    avoid: ["chair", "table"],
+  },
+  "compactor-storage": {
+    label: "compactor storage system",
+    avoid: ["chair", "table"],
+  },
+  locker: {
+    label: "office locker system",
+    avoid: ["chair", "table"],
+  },
+  lounge: {
+    label: "lounge soft seating furniture",
+    avoid: ["workstation", "locker"],
+  },
+  sofa: {
+    label: "office sofa seating",
+    avoid: ["workstation", "locker"],
+  },
+  collaborative: {
+    label: "collaborative soft seating",
+    avoid: ["workstation", "storage"],
+  },
+  pouffee: {
+    label: "pouffee and ottoman soft seating",
+    avoid: ["workstation", "storage"],
+  },
+  classroom: {
+    label: "classroom education furniture",
+    avoid: ["lounge", "sofa"],
+  },
+  library: {
+    label: "library education furniture",
+    avoid: ["lounge", "sofa"],
+  },
+  hostel: {
+    label: "hostel education furniture",
+    avoid: ["lounge", "sofa"],
+  },
+  auditorium: {
+    label: "auditorium education seating",
+    avoid: ["workstation", "storage"],
+  },
   "oando-workstations": {
     label: "office workstation desk system",
     avoid: ["chair", "seating", "sofa"],
@@ -34,9 +150,13 @@ const CATEGORY_CONTEXT: Record<string, CategoryConfig> = {
   },
 };
 
+function normalizeCategoryLabel(category: string): string {
+  return category.replace("oando-", "").replace(/-/g, " ");
+}
+
 function fallbackAltText(category: string, name: string): string {
   const ctx = CATEGORY_CONTEXT[category] || {
-    label: category.replace("oando-", "").replace(/-/g, " "),
+    label: normalizeCategoryLabel(category),
     avoid: [],
   };
   return `${name} ${ctx.label}`.replace(/\s+/g, " ").trim().slice(0, 120);
@@ -53,7 +173,7 @@ export async function POST(req: NextRequest) {
     }
 
     const ctx = CATEGORY_CONTEXT[category] || {
-      label: category.replace("oando-", "").replace(/-/g, " "),
+      label: normalizeCategoryLabel(category),
       avoid: [],
     };
 

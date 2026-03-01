@@ -34,6 +34,8 @@ export interface ProductMetadata {
     isNestable?: boolean;
     isBifoldable?: boolean;
     seriesId?: string;
+    ai_alt_text?: string;
+    aiAltText?: string;
 }
 
 export interface Product {
@@ -60,6 +62,7 @@ export interface Product {
     series_id: string;
     series_name: string;
     created_at: string;
+    alt_text?: string;
 }
 
 // ── Compatibility types that match the old catalog.ts shape ─────────────────
@@ -80,6 +83,7 @@ export interface CompatProduct {
     technicalDrawings?: string[];
     documents?: string[];
     images?: string[];
+    altText?: string;
 }
 
 export interface CompatSeries {
@@ -98,6 +102,12 @@ export interface CompatCategory {
 
 /** Map a Supabase row to the shape the old catalog.ts used */
 function toCompatProduct(p: Product): CompatProduct {
+    const explicitAlt =
+        p.alt_text ||
+        p.metadata?.ai_alt_text ||
+        p.metadata?.aiAltText ||
+        `${p.name} product image`;
+
     return {
         id: p.id,
         slug: p.slug,
@@ -114,6 +124,7 @@ function toCompatProduct(p: Product): CompatProduct {
         "3d_model": p["3d_model"],
         threeDModelUrl: p["3d_model"],
         images: p.images ?? [],
+        altText: explicitAlt.replace(/\s+/g, " ").trim().slice(0, 140),
     };
 }
 

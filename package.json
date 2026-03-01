@@ -17,7 +17,10 @@
     "afc:organize:dry": "tsx scripts/organize-afc-images.ts --dry-run",
     "afc:organize:apply": "tsx scripts/organize-afc-images.ts --apply",
     "afc:organize:sync": "tsx scripts/organize-afc-images.ts --sync-db --sync-catalog",
-    "test:e2e:nav": "playwright test tests/navigation-smoke.spec.ts"
+    "test:e2e:nav": "playwright test tests/navigation-smoke.spec.ts",
+    "test:a11y": "playwright test tests/accessibility.spec.ts",
+    "alt:sync:dry": "tsx scripts/sync-missing-alt-text.ts",
+    "alt:sync:apply": "tsx scripts/sync-missing-alt-text.ts --apply"
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.11",
@@ -62,6 +65,7 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
     "@axe-core/react": "^4.11.1",
     "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.2.0",

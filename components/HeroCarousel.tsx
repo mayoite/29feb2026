@@ -162,14 +162,20 @@ export function HeroCarousel() {
         {slides.map((_, i) => (
           <button
             key={i}
+            type="button"
             onClick={() => emblaApi?.scrollTo(i)}
-            className={
-              i === selectedIndex
-                ? "w-2.5 h-2.5 rounded-full bg-white"
-                : "w-2.5 h-2.5 rounded-full bg-white/40"
-            }
+            className="inline-flex h-7 w-7 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-black/40"
             aria-label={`Go to slide ${i + 1}`}
-          />
+            aria-current={i === selectedIndex ? "true" : undefined}
+          >
+            <span
+              className={
+                i === selectedIndex
+                  ? "h-2.5 w-2.5 rounded-full bg-white"
+                  : "h-2.5 w-2.5 rounded-full bg-white/40"
+              }
+            />
+          </button>
         ))}
       </div>
     </div>

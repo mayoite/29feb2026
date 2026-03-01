@@ -4,7 +4,6 @@ import type {
   CompatCategory as Category,
   CompatProduct as Product,
 } from "@/lib/getProducts";
-import Fuse from "fuse.js";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
@@ -17,84 +16,132 @@ import {
   Filter,
   ShoppingCart,
 } from "lucide-react";
-import { useState, useMemo, useCallback, Suspense } from "react";
+import {
+  useState,
+  useMemo,
+  useCallback,
+  Suspense,
+  useEffect,
+  useRef,
+} from "react";
 import clsx from "clsx";
+import { useQuery } from "@tanstack/react-query";
 import { useQuoteCart } from "@/lib/store/quoteCart";
+import {
+  SUSTAINABILITY_THRESHOLDS,
+  buildFilterParams,
+  buildFilterUrl,
+  countActiveFilters,
+  parseFiltersFromSearchParams,
+  type ActiveFilters,
+  type SortOption,
+} from "@/lib/productFilters";
 
 // â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 interface FlatProduct extends Product {
   seriesId: string;
   seriesName: string;
-}
-
-type SortOption = "az" | "za";
-
-interface ActiveFilters {
-  series: string;
-  subcategory: string[];
-  priceRange: string[];
-  material: string[];
-  hasHeadrest: boolean;
-  isHeightAdjustable: boolean;
-  bifmaCertified: boolean;
-  isStackable: boolean;
-  sort: SortOption;
-  query: string;
+  altText?: string;
 }
 
 // â”€â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-function buildUrl(pathname: string, filters: ActiveFilters): string {
-  const params = new URLSearchParams();
-  if (filters.series !== "all") params.set("series", filters.series);
-  if (filters.query) params.set("q", filters.query);
-  if (filters.sort !== "az") params.set("sort", filters.sort);
-  filters.subcategory.forEach((v) => params.append("sub", v));
-  filters.priceRange.forEach((v) => params.append("price", v));
-  filters.material.forEach((v) => params.append("mat", v));
-  if (filters.hasHeadrest) params.set("headrest", "1");
-  if (filters.isHeightAdjustable) params.set("height-adj", "1");
-  if (filters.bifmaCertified) params.set("bifma", "1");
-  if (filters.isStackable) params.set("stackable", "1");
-  const qs = params.toString();
-  return qs ? `${pathname}?${qs}` : pathname;
-}
-
-function parseSortOption(value: string | null): SortOption {
-  return value === "za" ? "za" : "az";
-}
-
-function parseFilters(sp: URLSearchParams): ActiveFilters {
-  return {
-    series: sp.get("series") ?? "all",
-    query: sp.get("q") ?? "",
-    sort: parseSortOption(sp.get("sort")),
-    subcategory: sp.getAll("sub"),
-    priceRange: sp.getAll("price"),
-    material: sp.getAll("mat"),
-    hasHeadrest: sp.get("headrest") === "1",
-    isHeightAdjustable: sp.get("height-adj") === "1",
-    bifmaCertified: sp.get("bifma") === "1",
-    isStackable: sp.get("stackable") === "1",
+interface FilterResponse {
+  products: FlatProduct[];
+  total: number;
+  facets: {
+    series: string[];
+    subcategory: string[];
+    material: string[];
+    priceRange: string[];
+    ecoMin: { min: number; max: number };
+    featureAvailability: {
+      hasHeadrest: boolean;
+      isHeightAdjustable: boolean;
+      bifmaCertified: boolean;
+      isStackable: boolean;
+    };
+  };
+  meta: {
+    categoryId: string;
+    catalogTotal: number;
   };
 }
 
-function countActive(f: ActiveFilters): number {
-  let n = 0;
-  if (f.series !== "all") n++;
-  if (f.subcategory.length) n += f.subcategory.length;
-  if (f.priceRange.length) n += f.priceRange.length;
-  if (f.material.length) n += f.material.length;
-  if (f.hasHeadrest) n++;
-  if (f.isHeightAdjustable) n++;
-  if (f.bifmaCertified) n++;
-  if (f.isStackable) n++;
-  return n;
+function fallbackAltText(productName: string, categoryName: string): string {
+  return `${productName} ${categoryName}`.replace(/\s+/g, " ").trim().slice(0, 140);
 }
 
-function normalizeOptionValue(value?: string | null): string {
-  return (value || "").trim().replace(/\s+/g, " ").toLowerCase();
+function useDebouncedValue<T>(value: T, delayMs: number): T {
+  const [debounced, setDebounced] = useState(value);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebounced(value), delayMs);
+    return () => clearTimeout(timer);
+  }, [value, delayMs]);
+
+  return debounced;
+}
+
+function flattenCategoryProducts(category: Category): FlatProduct[] {
+  return category.series.flatMap((series) =>
+    series.products.map((product) => ({
+      ...product,
+      seriesId: series.id,
+      seriesName: series.name,
+      altText:
+        (product as unknown as { altText?: string; alt_text?: string }).altText ||
+        (product as unknown as { altText?: string; alt_text?: string }).alt_text ||
+        (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
+        (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
+        fallbackAltText(product.name, category.name),
+    })),
+  );
+}
+
+function buildFallbackFacets(products: FlatProduct[]): FilterResponse["facets"] {
+  const uniqueSorted = (values: string[]) =>
+    Array.from(
+      new Set(
+        values
+          .map((value) => value.trim())
+          .filter(Boolean),
+      ),
+    ).sort((a, b) => a.localeCompare(b));
+
+  const ecoScores = products
+    .map((product) => product.metadata?.sustainabilityScore)
+    .filter((score): score is number => typeof score === "number");
+  const total = products.length;
+  const hasHeadrestCount = products.filter((product) => product.metadata?.hasHeadrest).length;
+  const heightAdjCount = products.filter(
+    (product) => product.metadata?.isHeightAdjustable,
+  ).length;
+  const bifmaCount = products.filter((product) => product.metadata?.bifmaCertified).length;
+  const stackableCount = products.filter((product) => product.metadata?.isStackable).length;
+
+  return {
+    series: uniqueSorted(products.map((product) => product.seriesName)),
+    subcategory: uniqueSorted(
+      products.map((product) => product.metadata?.subcategory || ""),
+    ),
+    material: uniqueSorted(
+      products.flatMap((product) => product.metadata?.material || []),
+    ),
+    priceRange: uniqueSorted(
+      products.map((product) => product.metadata?.priceRange || ""),
+    ),
+    ecoMin: {
+      min: ecoScores.length > 0 ? Math.min(...ecoScores) : 0,
+      max: ecoScores.length > 0 ? Math.max(...ecoScores) : 10,
+    },
+    featureAvailability: {
+      hasHeadrest: hasHeadrestCount > 0 && hasHeadrestCount < total,
+      isHeightAdjustable: heightAdjCount > 0 && heightAdjCount < total,
+      bifmaCertified: bifmaCount > 0 && bifmaCount < total,
+      isStackable: stackableCount > 0 && stackableCount < total,
+    },
+  };
 }
 
 // â”€â”€â”€ Accordion Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -175,7 +222,6 @@ function CheckList({
 
 // â”€â”€â”€ Price Range Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
-const PRICE_RANGES = ["budget", "mid", "premium", "luxury"];
 function PriceButtons({
   options,
   selected,
@@ -190,15 +236,56 @@ function PriceButtons({
       {options.map((p) => (
         <button
           key={p}
+          type="button"
           onClick={() => onToggle(p)}
           className={clsx(
             "px-3 py-1.5 text-xs rounded-sm border transition-all capitalize font-medium",
             selected.includes(p)
-              ? "bg-neutral-900 text-white border-neutral-900"
+              ? "bg-[#fdbb0a] text-neutral-900 border-[#fdbb0a]"
               : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
           )}
         >
           {p}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function SustainabilityButtons({
+  selected,
+  onSelect,
+}: {
+  selected: number | null;
+  onSelect: (value: number | null) => void;
+}) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      <button
+        type="button"
+        onClick={() => onSelect(null)}
+        className={clsx(
+          "px-3 py-1.5 text-xs rounded-sm border transition-all font-medium",
+          selected === null
+            ? "bg-[#fdbb0a] border-[#fdbb0a] text-neutral-900"
+            : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
+        )}
+      >
+        Any
+      </button>
+      {SUSTAINABILITY_THRESHOLDS.map((threshold) => (
+        <button
+          key={threshold}
+          type="button"
+          onClick={() => onSelect(threshold)}
+          className={clsx(
+            "px-3 py-1.5 text-xs rounded-sm border transition-all font-medium",
+            selected === threshold
+              ? "bg-[#fdbb0a] border-[#fdbb0a] text-neutral-900"
+              : "bg-white text-neutral-600 border-neutral-200 hover:border-neutral-400",
+          )}
+        >
+          &gt;= {threshold}
         </button>
       ))}
     </div>
@@ -220,12 +307,14 @@ function Toggle({
     <label className="flex items-center justify-between gap-3 cursor-pointer py-1">
       <span className="text-sm text-neutral-600">{label}</span>
       <button
+        type="button"
         role="switch"
+        aria-label={label}
         aria-checked={checked}
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
-          checked ? "bg-neutral-900" : "bg-neutral-200",
+          checked ? "bg-[#fdbb0a]" : "bg-neutral-200",
         )}
       >
         <span
@@ -244,9 +333,13 @@ function Toggle({
 function ProductCard({
   product,
   categoryId,
+  categoryName,
+  contextQueryString,
 }: {
   product: FlatProduct;
   categoryId: string;
+  categoryName: string;
+  contextQueryString: string;
 }) {
   const addItem = useQuoteCart((state) => state.addItem);
   const firstImage =
@@ -259,7 +352,15 @@ function ProductCard({
   );
   const displayName = product.name;
   const ecoScore = product.metadata?.sustainabilityScore || 0;
-  const productHref = `/products/${categoryId}/${product.slug || product.id}`;
+  const baseHref = `/products/${categoryId}/${product.slug || product.id}`;
+  const productHref = contextQueryString
+    ? `${baseHref}?from=${encodeURIComponent(contextQueryString)}`
+    : baseHref;
+  const imageAlt =
+    product.altText ||
+    (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
+    (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
+    fallbackAltText(displayName, categoryName);
 
   return (
     <article className="group bg-white border border-neutral-100 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -267,7 +368,7 @@ function ProductCard({
         <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
           <Image
             src={imgSrc}
-            alt={displayName}
+            alt={imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-contain p-4 transition-transform duration-500 group-hover:scale-103"
@@ -351,12 +452,12 @@ function ActiveChips({
   total,
 }: {
   filters: ActiveFilters;
-  onRemove: (key: string, value?: string) => void;
+  onRemove: (key: string, value?: string | number) => void;
   onClearAll: () => void;
   total: number;
 }) {
   if (total === 0) return null;
-  const chips: { label: string; key: string; value?: string }[] = [];
+  const chips: { label: string; key: string; value?: string | number }[] = [];
   if (filters.series !== "all")
     chips.push({ label: `Series: ${filters.series}`, key: "series" });
   filters.subcategory.forEach((v) =>
@@ -376,6 +477,8 @@ function ActiveChips({
     chips.push({ label: "BIFMA certified", key: "bifmaCertified" });
   if (filters.isStackable)
     chips.push({ label: "Stackable", key: "isStackable" });
+  if (typeof filters.ecoMin === "number")
+    chips.push({ label: `Eco >= ${filters.ecoMin}`, key: "ecoMin", value: filters.ecoMin });
 
   return (
     <div className="flex flex-wrap items-center gap-2 py-3 border-b border-neutral-100">
@@ -385,14 +488,16 @@ function ActiveChips({
       {chips.map((chip) => (
         <button
           key={`${chip.key}-${chip.value ?? ""}`}
+          type="button"
           onClick={() => onRemove(chip.key, chip.value)}
-          className="flex items-center gap-1.5 bg-neutral-900 text-white text-xs px-2.5 py-1 rounded-sm hover:bg-neutral-700 transition-colors"
+          className="flex items-center gap-1.5 bg-[#fdbb0a] text-neutral-900 text-xs px-2.5 py-1 rounded-sm hover:bg-[#faaa13] transition-colors"
         >
           <span className="capitalize">{chip.label}</span>
           <X className="w-3 h-3" />
         </button>
       ))}
       <button
+        type="button"
         onClick={onClearAll}
         className="text-xs text-neutral-500 hover:text-neutral-900 underline transition-colors ml-1"
       >
@@ -415,166 +520,78 @@ function AdvancedFilterGridInner({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState(() => searchParams.get("q") ?? "");
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const drawerOpenButtonRef = useRef<HTMLButtonElement>(null);
+  const wasDrawerOpenRef = useRef(false);
 
-  // Parse filters from URL
-  const filters = useMemo(() => parseFilters(searchParams), [searchParams]);
-
-  // Flat product list
-  const allProducts = useMemo(
-    () =>
-      category.series
-        .flatMap((s) =>
-          s.products.map((p) => ({ ...p, seriesId: s.id, seriesName: s.name })),
-        ),
-    [category],
+  const filters = useMemo(
+    () => parseFiltersFromSearchParams(new URLSearchParams(searchParams.toString())),
+    [searchParams],
   );
+  const debouncedSearch = useDebouncedValue(searchInput, 250);
 
-  // Build filter option lists from available products
-  const options = useMemo(() => {
-    const series = new Map<string, string>();
-    const sub = new Map<string, string>();
-    const material = new Map<string, string>();
-    const priceRange = new Set<string>();
-    let headrestCount = 0;
-    let heightAdjustableCount = 0;
-    let bifmaCount = 0;
-    let stackableCount = 0;
-    allProducts.forEach((p) => {
-      const seriesName = p.seriesName?.trim();
-      if (seriesName) {
-        const key = normalizeOptionValue(seriesName);
-        if (key && !series.has(key)) series.set(key, seriesName);
-      }
-      if (p.metadata?.subcategory) {
-        const key = normalizeOptionValue(p.metadata.subcategory);
-        if (key && !sub.has(key)) sub.set(key, p.metadata.subcategory.trim());
-      }
-      p.metadata?.material?.forEach((m) => {
-        const key = normalizeOptionValue(m);
-        if (key && !material.has(key)) material.set(key, m.trim());
-      });
-      if (p.metadata?.priceRange) priceRange.add(p.metadata.priceRange);
-      if (p.metadata?.hasHeadrest) headrestCount++;
-      if (p.metadata?.isHeightAdjustable) heightAdjustableCount++;
-      if (p.metadata?.bifmaCertified) bifmaCount++;
-      if (p.metadata?.isStackable) stackableCount++;
-    });
-    const total = allProducts.length;
-
-    return {
-      series: [...series.values()].sort(),
-      subcategory: [...sub.values()].sort(),
-      material: [...material.values()].sort(),
-      priceRange: PRICE_RANGES.filter((range) => priceRange.has(range)),
-      featureAvailability: {
-        hasHeadrest: headrestCount > 0 && headrestCount < total,
-        isHeightAdjustable:
-          heightAdjustableCount > 0 && heightAdjustableCount < total,
-        bifmaCertified: bifmaCount > 0 && bifmaCount < total,
-        isStackable: stackableCount > 0 && stackableCount < total,
-      },
-    };
-  }, [allProducts]);
-
-  // Fuse.js instance for fuzzy product search
-  const fuse = useMemo(
-    () =>
-      new Fuse(allProducts, {
-        keys: ["name", "description", "seriesName"],
-        threshold: 0.35,
-        includeScore: true,
-      }),
-    [allProducts],
-  );
-
-  // Apply filters
-  const filteredProducts = useMemo(() => {
-    let list = [...allProducts];
-
-    // Series
-    if (filters.series !== "all" && options.series.length > 1) {
-      list = list.filter(
-        (p) =>
-          normalizeOptionValue(p.seriesName) ===
-          normalizeOptionValue(filters.series),
-      );
-    }
-
-    // Fuzzy search via fuse.js
-    if (filters.query.trim()) {
-      const results = fuse.search(filters.query.trim());
-      const matchIds = new Set(results.map((r) => r.item.id));
-      list = list.filter((p) => matchIds.has(p.id));
-    }
-
-    // Subcategory
-    if (filters.subcategory.length && options.subcategory.length > 1) {
-      list = list.filter(
-        (p) =>
-          p.metadata?.subcategory &&
-          filters.subcategory.some(
-            (value) =>
-              normalizeOptionValue(value) ===
-              normalizeOptionValue(p.metadata?.subcategory),
-          ),
-      );
-    }
-
-    // Price range
-    if (filters.priceRange.length && options.priceRange.length > 1) {
-      list = list.filter(
-        (p) =>
-          p.metadata?.priceRange &&
-          filters.priceRange.includes(p.metadata.priceRange),
-      );
-    }
-
-    // Material
-    if (filters.material.length && options.material.length > 1) {
-      list = list.filter((p) =>
-        p.metadata?.material?.some((m) =>
-          filters.material.some(
-            (value) => normalizeOptionValue(value) === normalizeOptionValue(m),
-          ),
-        ),
-      );
-    }
-
-    // Feature toggles
-    if (filters.hasHeadrest && options.featureAvailability.hasHeadrest) {
-      list = list.filter((p) => p.metadata?.hasHeadrest);
-    }
-    if (
-      filters.isHeightAdjustable &&
-      options.featureAvailability.isHeightAdjustable
-    ) {
-      list = list.filter((p) => p.metadata?.isHeightAdjustable);
-    }
-    if (filters.bifmaCertified && options.featureAvailability.bifmaCertified) {
-      list = list.filter((p) => p.metadata?.bifmaCertified);
-    }
-    if (filters.isStackable && options.featureAvailability.isStackable) {
-      list = list.filter((p) => p.metadata?.isStackable);
-    }
-
-    // Sort
-    list.sort((a, b) =>
-      filters.sort === "za"
-        ? b.name.localeCompare(a.name)
-        : a.name.localeCompare(b.name),
-    );
-
-    return list;
-  }, [allProducts, filters, options, fuse]);
-
-  // Update URL on filter change
   const updateFilters = useCallback(
-    (next: Partial<ActiveFilters>) => {
-      const updated = { ...filters, ...next };
-      router.push(buildUrl(pathname, updated), { scroll: false });
+    (next: Partial<ActiveFilters>, options?: { replace?: boolean }) => {
+      const updated = { ...filters, ...next } as ActiveFilters;
+      const nextUrl = buildFilterUrl(pathname, updated);
+      if (options?.replace) {
+        router.replace(nextUrl, { scroll: false });
+        return;
+      }
+      router.push(nextUrl, { scroll: false });
     },
-    [filters, router, pathname],
+    [filters, pathname, router],
   );
+
+  useEffect(() => {
+    if (debouncedSearch === filters.query) return;
+    updateFilters({ query: debouncedSearch }, { replace: true });
+  }, [debouncedSearch, filters.query, updateFilters]);
+
+  const fallbackProducts = useMemo(() => flattenCategoryProducts(category), [category]);
+  const fallbackFacets = useMemo(
+    () => buildFallbackFacets(fallbackProducts),
+    [fallbackProducts],
+  );
+
+  const filterQueryString = useMemo(
+    () => buildFilterParams(filters).toString(),
+    [filters],
+  );
+
+  const apiQueryString = useMemo(() => {
+    const params = new URLSearchParams(filterQueryString);
+    params.set("category", categoryId);
+    return params.toString();
+  }, [categoryId, filterQueryString]);
+
+  const { data, isLoading, isFetching, error } = useQuery<FilterResponse>({
+    queryKey: ["category-products", categoryId, apiQueryString],
+    queryFn: async () => {
+      const response = await fetch(`/api/products/filter?${apiQueryString}`, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+        cache: "no-store",
+      });
+      if (!response.ok) throw new Error(`Filter request failed: ${response.status}`);
+      return (await response.json()) as FilterResponse;
+    },
+    placeholderData: (previous) => previous,
+    staleTime: 30_000,
+    gcTime: 300_000,
+  });
+
+  const filteredProducts = data?.products ?? fallbackProducts;
+  const options = data?.facets ?? fallbackFacets;
+  const allProducts = data?.meta.catalogTotal ?? fallbackProducts.length;
+
+  const showFeatureFilters =
+    categoryId === "seating" &&
+    (options.featureAvailability.hasHeadrest ||
+      options.featureAvailability.isHeightAdjustable ||
+      options.featureAvailability.bifmaCertified ||
+      options.featureAvailability.isStackable);
 
   const toggleArray = useCallback(
     (
@@ -591,7 +608,7 @@ function AdvancedFilterGridInner({
   );
 
   const removeChip = useCallback(
-    (key: string, value?: string) => {
+    (key: string, value?: string | number) => {
       if (
         key === "subcategory" ||
         key === "priceRange" ||
@@ -608,16 +625,72 @@ function AdvancedFilterGridInner({
         updateFilters({ [key]: false });
       } else if (key === "series") {
         updateFilters({ series: "all" });
+      } else if (key === "ecoMin") {
+        updateFilters({ ecoMin: null });
       }
     },
     [filters, updateFilters],
   );
 
   const clearAll = useCallback(() => {
+    setSearchInput("");
     router.push(pathname, { scroll: false });
   }, [router, pathname]);
 
-  const activeCount = countActive(filters);
+  const activeCount = countActiveFilters(filters);
+
+  useEffect(() => {
+    if (!drawerOpen) {
+      if (wasDrawerOpenRef.current) drawerOpenButtonRef.current?.focus();
+      wasDrawerOpenRef.current = false;
+      return;
+    }
+
+    wasDrawerOpenRef.current = true;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const focusTimer = window.setTimeout(() => {
+      if (!drawerRef.current) return;
+      const firstFocusable = drawerRef.current.querySelector<HTMLElement>(
+        "button:not([disabled]), a[href], input, select, textarea, [tabindex]:not([tabindex='-1'])",
+      );
+      firstFocusable?.focus();
+    }, 0);
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (!drawerRef.current) return;
+      if (event.key === "Escape") {
+        setDrawerOpen(false);
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusable = Array.from(
+        drawerRef.current.querySelectorAll<HTMLElement>(
+          "button:not([disabled]), a[href], input, select, textarea, [tabindex]:not([tabindex='-1'])",
+        ),
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [drawerOpen]);
 
   // â”€â”€ Sidebar content (shared between desktop + drawer) â”€â”€
   const SidebarContent = (
@@ -652,11 +725,12 @@ function AdvancedFilterGridInner({
         >
           <div className="space-y-1.5">
             <button
+              type="button"
               onClick={() => updateFilters({ series: "all" })}
               className={clsx(
                 "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
                 filters.series === "all"
-                  ? "bg-neutral-900 text-white font-semibold"
+                  ? "bg-[#fdbb0a] text-neutral-900 font-semibold"
                   : "text-neutral-600 hover:bg-neutral-50",
               )}
             >
@@ -665,11 +739,12 @@ function AdvancedFilterGridInner({
             {options.series.map((seriesName) => (
               <button
                 key={seriesName}
+                type="button"
                 onClick={() => updateFilters({ series: seriesName })}
                 className={clsx(
                   "w-full text-left text-sm py-1.5 px-2 rounded-sm transition-colors",
                   filters.series === seriesName
-                    ? "bg-neutral-900 text-white font-semibold"
+                    ? "bg-[#fdbb0a] text-neutral-900 font-semibold"
                     : "text-neutral-600 hover:bg-neutral-50",
                 )}
               >
@@ -725,16 +800,19 @@ function AdvancedFilterGridInner({
         </AccordionSection>
       )}
 
+      <AccordionSection
+        title="Sustainability"
+        count={typeof filters.ecoMin === "number" ? 1 : 0}
+        defaultOpen={typeof filters.ecoMin === "number"}
+      >
+        <SustainabilityButtons
+          selected={filters.ecoMin}
+          onSelect={(ecoMin) => updateFilters({ ecoMin })}
+        />
+      </AccordionSection>
+
       {/* Feature Toggles */}
-      {(options.featureAvailability.hasHeadrest ||
-        options.featureAvailability.isHeightAdjustable ||
-        options.featureAvailability.bifmaCertified ||
-        options.featureAvailability.isStackable) &&
-        (categoryId === "seating" ||
-          categoryId === "chairs-mesh" ||
-          categoryId === "chairs-others" ||
-          categoryId === "cafe-seating" ||
-          categoryId === "oando-seating") && (
+      {showFeatureFilters && (
         <AccordionSection
           title="Features"
           count={
@@ -777,7 +855,6 @@ function AdvancedFilterGridInner({
         </AccordionSection>
       )}
 
-      {/* Sustainability slider removed for a cleaner filter set. */}
     </div>
   );
 
@@ -792,6 +869,8 @@ function AdvancedFilterGridInner({
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             {/* Mobile filter button */}
             <button
+              ref={drawerOpenButtonRef}
+              type="button"
               onClick={() => setDrawerOpen(true)}
               className="lg:hidden flex items-center gap-2 h-10 px-3 bg-white border border-neutral-200 rounded-sm text-sm text-neutral-700 hover:border-neutral-400 transition-colors shrink-0"
               aria-label="Open filters"
@@ -813,12 +892,13 @@ function AdvancedFilterGridInner({
                 placeholder={`Search ${category.name.toLowerCase()}...`}
                 aria-label={`Search ${category.name}`}
                 className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-neutral-800 transition-colors"
-                value={filters.query}
-                onChange={(e) => updateFilters({ query: e.target.value })}
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
-              {filters.query && (
+              {searchInput && (
                 <button
-                  onClick={() => updateFilters({ query: "" })}
+                  type="button"
+                  onClick={() => setSearchInput("")}
                   className="absolute right-3 top-1/2 -translate-y-1/2"
                   aria-label="Clear search"
                 >
@@ -834,7 +914,7 @@ function AdvancedFilterGridInner({
                 aria-atomic="true"
                 className="text-xs text-neutral-500 font-medium whitespace-nowrap"
               >
-                {filteredProducts.length} / {allProducts.length} products
+                {filteredProducts.length} / {allProducts} products
               </span>
               <select
                 aria-label="Sort products"
@@ -846,6 +926,8 @@ function AdvancedFilterGridInner({
               >
                 <option value="az">Name A-Z</option>
                 <option value="za">Name Z-A</option>
+                <option value="ecoDesc">Eco Score High-Low</option>
+                <option value="ecoAsc">Eco Score Low-High</option>
               </select>
             </div>
           </div>
@@ -857,6 +939,14 @@ function AdvancedFilterGridInner({
             onClearAll={clearAll}
             total={activeCount}
           />
+          {isFetching && (
+            <p className="pt-2 text-xs text-neutral-400">Refreshing products…</p>
+          )}
+          {error && (
+            <p className="pt-2 text-xs text-red-600">
+              Live filter sync failed. Showing fallback product set.
+            </p>
+          )}
         </div>
       </div>
 
@@ -869,7 +959,16 @@ function AdvancedFilterGridInner({
 
         {/* Grid */}
         <div className="flex-1 min-w-0">
-          {filteredProducts.length === 0 ? (
+          {isLoading && filteredProducts.length === 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div
+                  key={`loading-${index}`}
+                  className="h-[24rem] rounded-sm border border-neutral-100 bg-white animate-pulse"
+                />
+              ))}
+            </div>
+          ) : filteredProducts.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-24 text-center">
               <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center mb-4">
                 <SearchIcon className="w-5 h-5 text-neutral-400" />
@@ -894,7 +993,12 @@ function AdvancedFilterGridInner({
                   key={product.id}
                   className="transition-all duration-300 animate-fadein"
                 >
-                  <ProductCard product={product} categoryId={categoryId} />
+                  <ProductCard
+                    product={product}
+                    categoryId={categoryId}
+                    categoryName={category.name}
+                    contextQueryString={filterQueryString}
+                  />
                 </div>
               ))}
             </div>
@@ -913,6 +1017,8 @@ function AdvancedFilterGridInner({
           />
           {/* Panel */}
           <div
+            ref={drawerRef}
+            tabIndex={-1}
             className="fixed inset-y-0 left-0 w-80 max-w-full bg-neutral-50 z-50 overflow-y-auto lg:hidden shadow-2xl"
             role="dialog"
             aria-modal="true"
@@ -929,8 +1035,10 @@ function AdvancedFilterGridInner({
                 )}
               </span>
               <button
+                type="button"
                 onClick={() => setDrawerOpen(false)}
                 aria-label="Close filters"
+                className="min-h-11 min-w-11 inline-flex items-center justify-center"
               >
                 <X className="w-5 h-5 text-neutral-500 hover:text-neutral-900" />
               </button>
@@ -939,18 +1047,20 @@ function AdvancedFilterGridInner({
             <div className="sticky bottom-0 bg-white border-t border-neutral-100 p-4 flex gap-2">
               {activeCount > 0 && (
                 <button
+                  type="button"
                   onClick={() => {
                     clearAll();
                     setDrawerOpen(false);
                   }}
-                  className="flex-1 h-10 border border-neutral-200 text-sm text-neutral-700 rounded-sm hover:bg-neutral-50 transition-colors"
+                  className="flex-1 h-11 border border-neutral-200 text-sm text-neutral-700 rounded-sm hover:bg-neutral-50 transition-colors"
                 >
                   Clear all
                 </button>
               )}
               <button
+                type="button"
                 onClick={() => setDrawerOpen(false)}
-                className="flex-1 h-10 bg-neutral-900 text-white text-sm rounded-sm hover:bg-neutral-700 transition-colors font-medium"
+                className="flex-1 h-11 bg-neutral-900 text-white text-sm rounded-sm hover:bg-neutral-700 transition-colors font-medium"
               >
                 View {filteredProducts.length} results
               </button>

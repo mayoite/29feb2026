@@ -68,4 +68,81 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Supabase
 - Vercel Analytics
 - Vercel Speed Insights
+
+## Dynamic Product Filters
+
+Category listing pages use URL-driven filters backed by `GET /api/products/filter`.
+
+### Query Parameters
+
+| Param | Type | Example | Notes |
+|---|---|---|---|
+| `category` | string | `seating` | Required in API request |
+| `q` | string | `ergonomic` | Debounced text search |
+| `series` | string | `Fluid Series` | Use `all` to reset |
+| `sub` | repeatable string | `sub=Mesh%20chairs` | Subcategory filter |
+| `price` | repeatable string | `price=mid` | `budget`, `mid`, `premium`, `luxury` |
+| `mat` | repeatable string | `mat=Mesh` | Material filter |
+| `ecoMin` | integer | `ecoMin=6` | Sustainability minimum score |
+| `headrest` | `1` | `headrest=1` | Boolean toggle |
+| `heightAdj` | `1` | `heightAdj=1` | Boolean toggle |
+| `bifma` | `1` | `bifma=1` | Boolean toggle |
+| `stackable` | `1` | `stackable=1` | Boolean toggle |
+| `sort` | string | `sort=ecoDesc` | `az`, `za`, `ecoDesc`, `ecoAsc` |
+
+### Shareable URL Example
+
+```text
+/products/seating?sub=Mesh%20chairs&price=mid&mat=Mesh&ecoMin=6&sort=ecoDesc
+```
+
+Product cards preserve current filter context through a `from` query param so breadcrumb navigation returns users to the same filtered listing state.
+
+## Accessibility Compliance
+
+### Automated Checks
+
+```bash
+npm run test:a11y
+```
+
+This runs Playwright + axe scans for:
+- `/`
+- `/products`
+- `/products/seating`
+- one product detail route
+- `/contact`
+- `/quote-cart`
+
+Release gate: no `critical` or `serious` violations for enabled rules.
+
+Current limitation: the automated suite temporarily excludes `color-contrast` while legacy typography shades are being remediated across older pages.
+
+### Manual Verification
+
+- Keyboard-only navigation for navbar, filters, drawers, and product actions
+- Visible focus indicators
+- Escape key behavior for modal/drawer flows
+- Screen reader checks on primary pages
+
+## Alt Text Sync Workflow
+
+Generate missing alt text for products in Supabase:
+
+```bash
+npm run alt:sync:dry
+npm run alt:sync:apply
+```
+
+Optional parameters:
+
+```bash
+tsx scripts/sync-missing-alt-text.ts --apply --limit=100 --batch-size=20 --retries=3
+```
+
+Environment variables required:
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY` (recommended for updates)
+- `OPENAI_API_KEY` (optional; fallback generation is used when missing)
+
 # 26022026

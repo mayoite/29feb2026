@@ -71,6 +71,11 @@ export function ProductViewer({
   const uniqueImages = Array.from(new Set(allImages));
   const fallbackImg = "/images/products/imported/fluid/image-1.webp";
   if (uniqueImages.length === 0) uniqueImages.push(fallbackImg);
+  const productImageAlt =
+    (product as unknown as { altText?: string }).altText ||
+    (product.metadata as Record<string, unknown> | undefined)?.ai_alt_text?.toString() ||
+    (product.metadata as Record<string, unknown> | undefined)?.aiAltText?.toString() ||
+    `${cleanName(product.name)} product image`;
 
   useEffect(() => {
     // Basic anonymous tracking for recommendations
@@ -224,6 +229,7 @@ export function ProductViewer({
             <div className="w-full aspect-video bg-neutral-50 border-t border-neutral-200 relative group">
               <div className="absolute top-4 left-4 z-20 flex gap-2">
                 <button
+                  type="button"
                   onClick={() => {
                     if (!isModelAvailable) return;
                     setIs3DMode((prev) => !prev);
@@ -262,7 +268,7 @@ export function ProductViewer({
                       fallback={
                         <Image
                           src={uniqueImages[0]}
-                          alt={product.name}
+                          alt={productImageAlt}
                           width={1200}
                           height={900}
                           className="w-full h-full object-contain"
@@ -325,6 +331,7 @@ export function ProductViewer({
 
               <div className="flex gap-4 items-center mb-6">
                 <button
+                  type="button"
                   onClick={() => {
                     const text = encodeURIComponent(
                       `Check out ${product.name} at One & Only Furniture!`,
@@ -341,6 +348,7 @@ export function ProductViewer({
                   <Twitter className="w-3.5 h-3.5" />
                 </button>
                 <button
+                  type="button"
                   onClick={() => {
                     const url = encodeURIComponent(window.location.href);
                     window.open(
@@ -354,10 +362,12 @@ export function ProductViewer({
                   <Facebook className="w-3.5 h-3.5" />
                 </button>
                 <button
+                  type="button"
                   onClick={() => {
                     navigator.clipboard.writeText(window.location.href);
                     // could add a toast here
                   }}
+                  aria-label="Copy product link"
                   className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors"
                 >
                   <Share2 className="w-3.5 h-3.5" /> Copy Link
@@ -381,6 +391,7 @@ export function ProductViewer({
                     const isSelected = selectedVariant?.id === variant.id;
                     return (
                       <button
+                        type="button"
                         key={variant.id}
                         onClick={() => handleVariantChange(variant)}
                         title={variant.variantName}

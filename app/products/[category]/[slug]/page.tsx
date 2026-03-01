@@ -161,9 +161,11 @@ function ProductLoadingSkeleton() {
 async function ProductContent({
   categoryId,
   slug,
+  fromQuery,
 }: {
   categoryId: string;
   slug: string;
+  fromQuery?: string;
 }) {
   const { data: rawProduct } = await supabase
     .from("products")
@@ -195,6 +197,10 @@ async function ProductContent({
     redirect(`/products/${resolvedCategoryId}/${slug}`);
   }
   const aiOverview = p.alt_text || p.metadata?.ai_alt_text || p.description || "";
+  const deterministicAlt =
+    p.alt_text ||
+    p.metadata?.ai_alt_text ||
+    `${p.name} ${resolvedCategoryId.replace(/-/g, " ")}`.replace(/\s+/g, " ").trim();
   const variantList: ProductVariant[] = Array.isArray(p.variants)
     ? p.variants
         .map((variant, idx) => {
@@ -240,7 +246,12 @@ async function ProductContent({
         [],
     },
     metadata: p.metadata || {},
+    altText: deterministicAlt,
   };
+
+  const categoryRoute = fromQuery
+    ? `/products/${resolvedCategoryId}?${fromQuery}`
+    : `/products/${resolvedCategoryId}`;
 
   const url = `${BASE_URL}/products/${resolvedCategoryId}/${p.slug}`;
   const productJsonLd = {
@@ -269,7 +280,7 @@ async function ProductContent({
       <ProductViewer
         product={compatProduct}
         seriesName={p.series_name}
-        categoryRoute={`/products/${resolvedCategoryId}`}
+        categoryRoute={categoryRoute}
         categoryId={resolvedCategoryId}
       />
     </>
@@ -278,14 +289,23 @@ async function ProductContent({
 
 export default async function ProductPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ category: string; slug: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { category: categoryId, slug } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const rawFrom = resolvedSearchParams.from;
+  const fromQuery = Array.isArray(rawFrom) ? rawFrom[0] : rawFrom;
+  const safeFromQuery =
+    typeof fromQuery === "string" && fromQuery.length > 0
+      ? fromQuery.slice(0, 1500)
+      : undefined;
 
   return (
     <Suspense fallback={<ProductLoadingSkeleton />}>
-      <ProductContent categoryId={categoryId} slug={slug} />
+      <ProductContent categoryId={categoryId} slug={slug} fromQuery={safeFromQuery} />
     </Suspense>
   );
 }
