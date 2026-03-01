@@ -1,4 +1,5 @@
 import { supabase } from "./db";
+import { oandoCatalog } from "./catalog";
 
 // ── Supabase-sourced Product types ──────────────────────────────────────────
 
@@ -187,26 +188,81 @@ interface CategoryRow {
     name: string;
 }
 
+const CATALOG_FETCH_RETRIES = 3;
+const CATALOG_RETRY_DELAY_MS = 500;
+
+function summarizeSupabaseError(message?: string): string {
+    if (!message) return "Unknown Supabase error";
+    const singleLine = message.replace(/\s+/g, " ").trim();
+    return singleLine.length > 260 ? `${singleLine.slice(0, 260)}...` : singleLine;
+}
+
+function isTransientCatalogError(message?: string): boolean {
+    if (!message) return false;
+    const normalized = message.toLowerCase();
+    return (
+        normalized.includes("ssl handshake failed") ||
+        normalized.includes("error code 525") ||
+        normalized.includes("fetch failed") ||
+        normalized.includes("network") ||
+        normalized.includes("timeout")
+    );
+}
+
+function wait(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function fallbackCatalog(reason: string): CompatCategory[] {
+    console.warn(`[getCatalog] Falling back to local catalog: ${reason}`);
+    return oandoCatalog as unknown as CompatCategory[];
+}
+
 /** Fetch all products and group them into the old Category[] shape.
  *  This is the main bridge used by pages during migration. */
 export async function getCatalog(): Promise<CompatCategory[]> {
-    // Fetch categories and products in parallel
-    const [catRes, prodRes] = await Promise.all([
-        supabase.from("categories").select("*"),
-        supabase.from("products").select("*, categories(name)").order("name", { ascending: true }),
-    ]);
+    let categories: CategoryRow[] = [];
+    let products: Product[] = [];
+    let lastError = "";
 
-    if (catRes.error) {
-        console.error("[getCatalog] Categories error:", catRes.error.message);
-        return [];
-    }
-    if (prodRes.error) {
-        console.error("[getCatalog] Products error:", prodRes.error.message);
-        return [];
+    for (let attempt = 1; attempt <= CATALOG_FETCH_RETRIES; attempt += 1) {
+        const [catRes, prodRes] = await Promise.all([
+            supabase.from("categories").select("*"),
+            supabase.from("products").select("*, categories(name)").order("name", { ascending: true }),
+        ]);
+
+        const categoryError = catRes.error?.message;
+        const productError = prodRes.error?.message;
+
+        if (!categoryError && !productError) {
+            categories = catRes.data as CategoryRow[];
+            products = prodRes.data as Product[];
+            break;
+        }
+
+        const summarizedCategoryError = summarizeSupabaseError(categoryError);
+        const summarizedProductError = summarizeSupabaseError(productError);
+        const combinedError = categoryError || productError || "Unknown fetch error";
+        lastError = combinedError;
+
+        if (categoryError) {
+            console.error(`[getCatalog] Categories error (attempt ${attempt}/${CATALOG_FETCH_RETRIES}):`, summarizedCategoryError);
+        }
+        if (productError) {
+            console.error(`[getCatalog] Products error (attempt ${attempt}/${CATALOG_FETCH_RETRIES}):`, summarizedProductError);
+        }
+
+        if (attempt < CATALOG_FETCH_RETRIES && isTransientCatalogError(combinedError)) {
+            await wait(CATALOG_RETRY_DELAY_MS * attempt);
+            continue;
+        }
+
+        return fallbackCatalog(summarizeSupabaseError(combinedError));
     }
 
-    const categories = catRes.data as CategoryRow[];
-    const products = prodRes.data as Product[];
+    if (categories.length === 0 && products.length === 0 && lastError) {
+        return fallbackCatalog(summarizeSupabaseError(lastError));
+    }
 
     // Group by category, then by series
     const catMap = new Map<string, { info: CategoryRow; products: Product[] }>();
@@ -255,7 +311,7 @@ export async function getCatalog(): Promise<CompatCategory[]> {
         });
     }
 
-    return result;
+    return result.length > 0 ? result : fallbackCatalog("Supabase catalog returned no usable categories");
 }
 
 /** Get all unique category IDs from Supabase (for generateStaticParams) */
